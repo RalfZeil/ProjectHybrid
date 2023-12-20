@@ -15,8 +15,7 @@ namespace Hybrid
 
         private List<GameObject> allCellObjects = new List<GameObject>();
 
-        [ContextMenu("Generate Grid")]
-        private void GenerateGrid()
+        public void GenerateGrid()
         {
             grid = new Cell[width, height];
             grid.Initialize();
