@@ -10,12 +10,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetPos;
     private Quaternion targetRot;
 
+    private Cell currentCell;
+
     private void Start()
     {
         playerInput = new PlayerInputActions();
         playerInput.Enable();
 
         playerInput.Character.Walk.performed += ctx => Move(ctx.ReadValue<Vector2>());
+
+        currentCell = Hybrid.Grid.Instance.GetPlayerStartCell();
+        transform.position = currentCell.transform.position;
     }
 
     private void OnDestroy()
@@ -31,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(Vector2 input)
     {
-        Debug.Log(input);
         if (input.x > 0 || input.x < 0)
         {
             targetRot = Quaternion.Euler(0, targetRot.eulerAngles.y + (90 * input.x), 0);
@@ -40,6 +44,5 @@ public class PlayerMovement : MonoBehaviour
         {
             targetPos = transform.position + (transform.forward * step * input.y);
         }
-
     }
 }
