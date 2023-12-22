@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +10,9 @@ namespace Hybrid
         public int height = 10;
         public Cell[,] grid;
         public float scaleFactor = 1f;
-        public CellPrefab cellPrefab;
+        public GameObject cellPrefab;
 
-        private List<GameObject> allCellObjects = new List<GameObject>();
+        private List<Cell> allCellObjects = new List<Cell>();
 
         public void GenerateGrid()
         {
@@ -24,7 +23,7 @@ namespace Hybrid
             {
                 for (int y = 0; y < height; y++)
                 {
-                    grid[x, y] = new Cell();
+                    grid[x, y] = Instantiate(cellPrefab, new Vector3(x * scaleFactor, 0, y * scaleFactor), Quaternion.identity, transform).GetComponent<Cell>();
                     grid[x, y].gridPosition = new Vector2Int(x, y);
                 }
             }
@@ -33,11 +32,31 @@ namespace Hybrid
             {
                 for (int y = 0; y < height; y++)
                 {
-                    CellPrefab cellObject = Instantiate(cellPrefab, new Vector3(x * scaleFactor, 0, y * scaleFactor), Quaternion.identity, transform);
-                    cellObject.SpawnWalls(grid[x, y]);
-                    allCellObjects.Add(cellObject.gameObject);
+                    grid[x, y].SpawnWalls(grid[x, y]);
+                    allCellObjects.Add(grid[x, y]);
                 }
             }
+        }
+
+        public void DeleteGrid()
+        {
+            foreach (Transform transform in transform)
+            {
+                DestroyImmediate(transform.gameObject);
+            }
+        }
+
+        /// <summary>
+        /// Returns the first cell with the PlayerStart bool thats true
+        /// </summary>
+        /// <returns></returns>
+        public Cell GetPlayerStartCell()
+        {
+            foreach (Cell cell in allCellObjects)
+            {
+                if (cell.playerStart == true) return cell;
+            }
+            return null;
         }
     }
 }

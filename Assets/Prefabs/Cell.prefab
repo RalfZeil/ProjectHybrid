@@ -148,7 +148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3917937299341079856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a9bd717a50bed4bb714fd9dd412516, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e085d1236f8232488438a39acedecfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridPosition: {x: 0, y: 0}
+  walls: 0
+  playerStart: 0
   WallPrefab: {fileID: 7137301303950057259, guid: d5b3b5c721ec15549b50ce91913b8a1c, type: 3}
