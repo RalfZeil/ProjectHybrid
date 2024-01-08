@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -6,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float step = 5f;
     private float speed = 5f;
-    private float step = 10f;
 
     private Vector3 targetPos;
     private Quaternion targetRot;
@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnDestroy()
     {
         playerInput.Disable();
+
+        playerInput.Character.Move.performed -= ctx => Move(ctx.ReadValue<float>());
+        playerInput.Character.Rotate.performed -= ctx => Rotate(ctx.ReadValue<float>());
     }
 
     private void Update()
@@ -47,16 +50,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Rotate(input.x);
         }
-        if (input.y != 0)
-        {
-            Move(input.y);
-        }
-        else if ( input.y < 0) // Move Backward
-        {
-            
-            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
-        }
-
     }
 
     public void SetNewDestination(Cell cell)
@@ -81,10 +74,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
-        // Calculate the forward direction based on targetRot
-        Vector3 direction = Quaternion.Euler(0, rotationAngles[currentRotationIndex], 0) * Vector3.forward;
+        //// Calculate the forward direction based on targetRot
+        //Vector3 direction = Quaternion.Euler(0, rotationAngles[currentRotationIndex], 0) * Vector3.forward;
 
-        // Update the target position for movement
-        targetPos = transform.position + (direction * step * inputY);
+        //// Update the target position for movement
+        //targetPos = transform.position + (direction * step * inputY);
+
+        if (inputY > 0) // Move forward TODO: Move forward instead of always going to a specific wind direction
+        {
+            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+        }
+        else if (inputY < 0) // Move Backward
+        {
+            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+        }
     }
 }
