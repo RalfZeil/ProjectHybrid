@@ -8,8 +8,8 @@ namespace Hybrid
         public static Grid Instance;
 
         [Header("Grid settings")]
-        public int width = 10;
-        public int height = 10;
+        public int width = 20;
+        public int height = 20;
         public Cell[,] grid;
         public float scaleFactor = 1f;
         public GameObject cellPrefab;
@@ -20,11 +20,16 @@ namespace Hybrid
         {
             Instance = this;
 
-            for (int x = 0; x < width; x++)
+            grid = new Cell[width, height];
+
+            foreach(Transform child in transform)
             {
-                for (int y = 0; y < height; y++)
+                Cell cell = child.GetComponent<Cell>();
+
+                if (cell != null)
                 {
-                    allCellObjects.Add(grid[x, y]);                   
+                    grid[cell.gridPosition.x, cell.gridPosition.y] = cell;
+                    allCellObjects.Add(cell);
                 }
             }
         }
@@ -67,10 +72,15 @@ namespace Hybrid
         /// <returns></returns>
         public Cell GetPlayerStartCell()
         {
-            foreach (Cell cell in allCellObjects)
+            foreach(Transform child in transform)
             {
-                if (cell.playerStart == true) return cell;
+                if(child.GetComponent<Cell>().playerStart == true) { return child.GetComponent<Cell>(); }
             }
+
+            //foreach (Cell cell in allCellObjects)
+            //{
+            //    if (cell.playerStart == true) return cell;
+            //}
 
             Debug.LogWarning("There is no Player Start defined, check atleast one cell to Player Start");
             return null;
