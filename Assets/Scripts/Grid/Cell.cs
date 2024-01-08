@@ -64,6 +64,30 @@ public class Cell : MonoBehaviour
         return result;
     }
 
+    public Cell GetNorthernNeighbour(Cell[,] grid)
+    {
+        try { return grid[this.gridPosition.x, this.gridPosition.y + 1]; }
+        catch { return null; }
+    }
+
+    public Cell GetEasternNeighbour(Cell[,] grid)
+    {
+        try { return grid[this.gridPosition.x + 1, this.gridPosition.y]; }
+        catch { return null; }
+    }
+
+    public Cell GetSouthernNeighbour(Cell[,] grid)
+    {
+        try { return grid[this.gridPosition.x, this.gridPosition.y - 1]; }
+        catch { return null; }
+    }
+
+    public Cell GetWesternNeighbour(Cell[,] grid)
+    {
+        try { return grid[this.gridPosition.x - 1, this.gridPosition.y]; }
+        catch { return null; }
+    }
+
     public void SpawnWalls(Cell cell)
     {
         if (cell.HasWall(Wall.DOWN)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(0, 0, -1)), transform); }

@@ -34,6 +34,7 @@ namespace Hybrid
             }
         }
 
+#if UNITY_EDITOR
         public void GenerateGrid()
         {
             grid = new Cell[width, height];
@@ -65,6 +66,7 @@ namespace Hybrid
                 DestroyImmediate(transform.gameObject);
             }
         }
+#endif
 
         /// <summary>
         /// Returns the first cell with the PlayerStart bool thats true
@@ -72,15 +74,10 @@ namespace Hybrid
         /// <returns></returns>
         public Cell GetPlayerStartCell()
         {
-            foreach(Transform child in transform)
+            foreach (Cell cell in allCellObjects)
             {
-                if(child.GetComponent<Cell>().playerStart == true) { return child.GetComponent<Cell>(); }
+                if (cell.playerStart == true) return cell;
             }
-
-            //foreach (Cell cell in allCellObjects)
-            //{
-            //    if (cell.playerStart == true) return cell;
-            //}
 
             Debug.LogWarning("There is no Player Start defined, check atleast one cell to Player Start");
             return null;

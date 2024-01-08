@@ -4,8 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInputActions playerInput;
     
-    private float step = 5f;
     private float speed = 5f;
+    private float step = 10f;
 
     private Vector3 targetPos;
     private Quaternion targetRot;
@@ -19,8 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
         playerInput.Character.Walk.performed += ctx => Move(ctx.ReadValue<Vector2>());
 
-        currentCell = Hybrid.Grid.Instance.GetPlayerStartCell();
-        transform.position = currentCell.transform.position;
+        InitializePlayerPostition();
+    }
+
+    private void InitializePlayerPostition()
+    {
+        SetNewDestination(currentCell = Hybrid.Grid.Instance.GetPlayerStartCell());
     }
 
     private void OnDestroy()
@@ -40,9 +44,22 @@ public class PlayerMovement : MonoBehaviour
         {
             targetRot = Quaternion.Euler(0, targetRot.eulerAngles.y + (90 * input.x), 0);
         }
-        else if (input.y > 0 || input.y < 0)
+        else if (input.y > 0) // Move Forward
         {
-            targetPos = transform.position + (transform.forward * step * input.y);
+            SetNewDestination(currentCell.GetNorthernNeighbour(Hybrid.Grid.Instance.grid));
         }
+        else if ( input.y < 0) // Move Backward
+        {
+            
+            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+        }
+
+    }
+
+    public void SetNewDestination(Cell cell)
+    {
+        if (cell == null) { return; }
+        currentCell = cell;
+        targetPos = cell.transform.position;
     }
 }
