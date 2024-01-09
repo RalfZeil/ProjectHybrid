@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f7772213e27b004ba22b367aa2cb52e
+guid: 5355f605eab4ae14a859919da9e56428
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,63 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Arcade_Floor
-    second: {fileID: 2100000, guid: 0015b0b1e1bbbac4c915be604decd27b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Arcade_Wall
-    second: {fileID: 2100000, guid: 06b22869532bc48409fbe5322dc3e2d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bathroom_Floor
-    second: {fileID: 2100000, guid: a96b93c564b0a57479502a1b3ea87fef, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bathroom_Wall_
-    second: {fileID: 2100000, guid: deabc8881a369ca4ba366425539888b8, type: 2}
+      name: Ballpit
+    second: {fileID: 2100000, guid: 5797bab29499f0d49a33c224a4eec3ea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cloud
-    second: {fileID: 2100000, guid: b6b583715f4d0fd4394d0a37ed72ac77, type: 2}
+    second: {fileID: 2100000, guid: 9ef5a2f00433eda4081ee7c3046dc9da, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hallway_Floor
-    second: {fileID: 2100000, guid: 5bb2b3c7c174fc54abc35140c219afb7, type: 2}
+      name: Klimrek_Blauw
+    second: {fileID: 2100000, guid: e204425792b7c954fb06626abda353e4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hallway_Wall
-    second: {fileID: 2100000, guid: 9ade976cd5ba6ea4783c674e15a1be87, type: 2}
+      name: Klimrek_Groen
+    second: {fileID: 2100000, guid: 427e3712c5684104eb1e771f65bca4a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Klimrek_Oranje
+    second: {fileID: 2100000, guid: 699f610798459b149b5a31336ca98e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Klimrek_Oranje2
+    second: {fileID: 2100000, guid: dfd6cf847512daa4eae9775d023b27d2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Klimrek_Pink
-    second: {fileID: 2100000, guid: 8884a4750336a7a44986eebb1289b497, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lobby
-    second: {fileID: 2100000, guid: a5340dc79a0a19347831cf1a92efd74d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lobby_Wall
-    second: {fileID: 2100000, guid: e0858934fce8099419bdbb6ad5bbfbba, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Playground_Floor
-    second: {fileID: 2100000, guid: 3c4aca6428490d94b9259aa566af5e40, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Playground_Wall
-    second: {fileID: 2100000, guid: 412284097a076e04ca78d95f51164194, type: 2}
+    second: {fileID: 2100000, guid: 4ce169e2bef9dbb4583123e2bbba26c7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
