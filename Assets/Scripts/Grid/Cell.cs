@@ -57,7 +57,14 @@ public class Cell : MonoBehaviour
                 {
                     continue;
                 }
+
                 Cell canditateCell = grid[cellX, cellY];
+
+                if (canditateCell.gridPosition.y > this.gridPosition.y && (canditateCell.HasWall(Wall.DOWN) || this.HasWall(Wall.UP))) { continue; }
+                if (canditateCell.gridPosition.y < this.gridPosition.y && (canditateCell.HasWall(Wall.UP) || this.HasWall(Wall.DOWN))) { continue; }
+                if (canditateCell.gridPosition.x > this.gridPosition.x && (canditateCell.HasWall(Wall.LEFT) || this.HasWall(Wall.RIGHT))) { continue; }
+                if (canditateCell.gridPosition.x < this.gridPosition.x && (canditateCell.HasWall(Wall.RIGHT) || this.HasWall(Wall.LEFT))) { continue; }
+
                 result.Add(canditateCell);
             }
         }
@@ -66,34 +73,53 @@ public class Cell : MonoBehaviour
 
     public Cell GetNorthernNeighbour(Cell[,] grid)
     {
-        try { return grid[this.gridPosition.x, this.gridPosition.y + 1]; }
+        try
+        {
+            Cell canditateCell = grid[this.gridPosition.x, this.gridPosition.y + 1];
+            if (canditateCell.HasWall(Wall.DOWN) || this.HasWall(Wall.UP)) { return null; }
+            return canditateCell;
+        }
         catch { return null; }
     }
 
     public Cell GetEasternNeighbour(Cell[,] grid)
     {
-        try { return grid[this.gridPosition.x + 1, this.gridPosition.y]; }
+        try
+        {
+            Cell canditateCell = grid[this.gridPosition.x + 1, this.gridPosition.y];
+            if (canditateCell.HasWall(Wall.LEFT) || this.HasWall(Wall.RIGHT)) { return null; }
+            return canditateCell;
+        }
         catch { return null; }
     }
 
     public Cell GetSouthernNeighbour(Cell[,] grid)
     {
-        try { return grid[this.gridPosition.x, this.gridPosition.y - 1]; }
+        try { 
+            Cell canditateCell = grid[this.gridPosition.x, this.gridPosition.y - 1];
+            if (canditateCell.HasWall(Wall.UP) || this.HasWall(Wall.DOWN)) { return null; }
+            return canditateCell;
+        }
         catch { return null; }
     }
 
     public Cell GetWesternNeighbour(Cell[,] grid)
     {
-        try { return grid[this.gridPosition.x - 1, this.gridPosition.y]; }
+        try
+        {
+            Cell canditateCell = grid[this.gridPosition.x - 1, this.gridPosition.y];
+            if (canditateCell.HasWall(Wall.RIGHT) || this.HasWall(Wall.LEFT)) { return null; }
+            return canditateCell;
+        }
         catch { return null; }
     }
 
     public void SpawnWalls(Cell cell)
     {
-        if (cell.HasWall(Wall.DOWN)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(0, 0, -1)), transform); }
-        if (cell.HasWall(Wall.UP)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(0, 0, 1)), transform); }
-        if (cell.HasWall(Wall.LEFT)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(-1, 0, 0)), transform); }
-        if (cell.HasWall(Wall.RIGHT)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(1, 0, 0)), transform); }
+        if (cell.HasWall(Wall.DOWN)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(0, 0, -5)), transform); }
+        if (cell.HasWall(Wall.UP)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(0, 0, 5)), transform); }
+        if (cell.HasWall(Wall.LEFT)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(-5, 0, 0)), transform); }
+        if (cell.HasWall(Wall.RIGHT)) { Instantiate(WallPrefab, transform.position, Quaternion.LookRotation(new Vector3(5, 0, 0)), transform); }
     }
 }
 

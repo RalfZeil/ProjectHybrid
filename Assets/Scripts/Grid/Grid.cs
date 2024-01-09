@@ -34,7 +34,24 @@ namespace Hybrid
             }
         }
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+
+            foreach (Cell cell in allCellObjects)
+            {
+                List<Cell> neighbours = cell.GetNeighbours(grid);
+
+                foreach (Cell neighbour in neighbours)
+                {
+                    Gizmos.DrawLine(cell.transform.position, neighbour.transform.position);
+                }
+            }
+        }
+
+
 #if UNITY_EDITOR
+
         public void GenerateGrid()
         {
             grid = new Cell[width, height];
