@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Windows;
 
@@ -5,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private PlayerInputActions playerInput;
 
-    private float step = 5f;
     private float speed = 5f;
 
     private Vector3 targetPos;
@@ -82,11 +82,39 @@ public class PlayerMovement : MonoBehaviour
 
         if (inputY > 0) // Move forward TODO: Move forward instead of always going to a specific wind direction
         {
-            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+            switch (currentRotationIndex)
+            {
+                case 0:
+                    SetNewDestination(currentCell.GetNorthernNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 1:
+                    SetNewDestination(currentCell.GetEasternNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 2:
+                    SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 3:
+                    SetNewDestination(currentCell.GetWesternNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+            }
         }
         else if (inputY < 0) // Move Backward
         {
-            SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+            switch (currentRotationIndex)
+            {
+                case 0:
+                    SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 1:
+                    SetNewDestination(currentCell.GetWesternNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 2:
+                    SetNewDestination(currentCell.GetNorthernNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+                case 3:
+                    SetNewDestination(currentCell.GetEasternNeighbour(Hybrid.Grid.Instance.grid));
+                    break;
+            }
         }
     }
 }

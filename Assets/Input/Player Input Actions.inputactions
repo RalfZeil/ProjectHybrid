@@ -92,6 +92,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Gamepad Joystick",
+                    "id": "6d204f6a-3b1d-490b-9276-c1ba6bd8fe2a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ae12b983-3c0b-480e-8f5f-24623f1c37bb",
+                    "path": "<Joystick>/{Back}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1846ac3c-3fd2-4b36-992a-56087c81700b",
+                    "path": "<Joystick>/{Forward}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Keyboard",
                     "id": "7129e0c1-5d1c-4fd2-b8e0-413232f0f37d",
                     "path": "1DAxis",
