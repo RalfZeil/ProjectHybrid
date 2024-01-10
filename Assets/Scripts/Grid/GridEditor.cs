@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(Hybrid.Grid))]
+[CustomEditor(typeof(GameGrid))]
 public class GridEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -11,7 +11,7 @@ public class GridEditor : Editor
 
         GUILayout.BeginHorizontal();
 
-        Hybrid.Grid grid = (Hybrid.Grid)target;
+        GameGrid grid = (GameGrid)target;
         if (GUILayout.Button("Generate Grid"))
         {
             grid.GenerateGrid();

@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void InitializePlayerPostition()
     {
-        SetNewDestination(currentCell = Hybrid.Grid.Instance.GetPlayerStartCell());
+        SetNewDestination(currentCell = GameGrid.Instance.GetPlayerStartCell());
     }
 
     private void OnDestroy()
@@ -85,16 +85,16 @@ public class PlayerMovement : MonoBehaviour
             switch (currentRotationIndex)
             {
                 case 0:
-                    SetNewDestination(currentCell.GetNorthernNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetNorthernNeighbour(GameGrid.Instance.grid));
                     break;
                 case 1:
-                    SetNewDestination(currentCell.GetEasternNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetEasternNeighbour(GameGrid.Instance.grid));
                     break;
                 case 2:
-                    SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetSouthernNeighbour(GameGrid.Instance.grid));
                     break;
                 case 3:
-                    SetNewDestination(currentCell.GetWesternNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetWesternNeighbour(GameGrid.Instance.grid));
                     break;
             }
         }
@@ -103,16 +103,16 @@ public class PlayerMovement : MonoBehaviour
             switch (currentRotationIndex)
             {
                 case 0:
-                    SetNewDestination(currentCell.GetSouthernNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetSouthernNeighbour(GameGrid.Instance.grid));
                     break;
                 case 1:
-                    SetNewDestination(currentCell.GetWesternNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetWesternNeighbour(GameGrid.Instance.grid));
                     break;
                 case 2:
-                    SetNewDestination(currentCell.GetNorthernNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetNorthernNeighbour(GameGrid.Instance.grid));
                     break;
                 case 3:
-                    SetNewDestination(currentCell.GetEasternNeighbour(Hybrid.Grid.Instance.grid));
+                    SetNewDestination(currentCell.GetEasternNeighbour(GameGrid.Instance.grid));
                     break;
             }
         }
