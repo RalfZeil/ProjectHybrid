@@ -230,45 +230,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1236372422636640475, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 55
-      objectReference: {fileID: 0}
     - target: {fileID: 3555882917530472047, guid: a1149306089659b418b9da046fc5f536, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3555882917530472047, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5902969659292842054, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7721566840261014688, guid: a1149306089659b418b9da046fc5f536, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8392950589917034043, guid: a1149306089659b418b9da046fc5f536, type: 3}
       propertyPath: m_LocalPosition.x

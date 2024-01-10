@@ -131,6 +131,32 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedBlackboard
+      value: '{"_variables":{"Player":{"_value":1,"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _objectReferences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _objectReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 1862682994}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedVariables.Array.data[0]._json
+      value: '{"_value":1,"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedVariables.Array.data[0]._references.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedVariables.Array.data[0]._references.Array.data[1]
+      value: 
+      objectReference: {fileID: 1862682994}
     - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -237,6 +263,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1149306089659b418b9da046fc5f536, type: 3}
+--- !u!1 &1862682994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3555882917530472047, guid: a1149306089659b418b9da046fc5f536, type: 3}
+  m_PrefabInstance: {fileID: 1862682993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1959275722
 GameObject:
   m_ObjectHideFlags: 0
