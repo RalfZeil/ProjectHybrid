@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 /*
  *   Original Scrip from Valentijn Muijrers
@@ -14,6 +15,9 @@ public class Cell : MonoBehaviour
 
     public bool playerStart;
     public GameObject WallPrefab;
+
+    [Header("Events")]
+    public UnityEvent OnEnterCell;
 
     public void RemoveWall(Wall wallToRemove)
     {

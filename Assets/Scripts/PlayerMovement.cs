@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion targetRot;
     private float[] rotationAngles = new float[] { 0, 90, 180, 270 };
     private int currentRotationIndex = 0;
+
+    private Cell prevCell;
     private Cell currentCell;
 
     private void Start()
@@ -74,11 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
-        //// Calculate the forward direction based on targetRot
-        //Vector3 direction = Quaternion.Euler(0, rotationAngles[currentRotationIndex], 0) * Vector3.forward;
-
-        //// Update the target position for movement
-        //targetPos = transform.position + (direction * step * inputY);
+        prevCell = currentCell;
 
         if (inputY > 0) // Move forward TODO: Move forward instead of always going to a specific wind direction
         {
@@ -97,6 +95,8 @@ public class PlayerMovement : MonoBehaviour
                     SetNewDestination(currentCell.GetWesternNeighbour(GameGrid.Instance.grid));
                     break;
             }
+
+            currentCell.OnEnterCell.Invoke();
         }
         else if (inputY < 0) // Move Backward
         {
@@ -116,5 +116,7 @@ public class PlayerMovement : MonoBehaviour
                     break;
             }
         }
+
+        if(prevCell != currentCell) { currentCell.OnEnterCell.Invoke(); }
     }
 }
