@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.Windows;
+using FMOD.Studio;
+using UnityEditor.Callbacks;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public float beatOffsetTime;
     private float lastBeatTime;
 
+
+    // sound related variables
+    private Vector3 previousPosition;
+    private float velocity;
+    private EventInstance playerFootsteps;
+
     private void Start()
     {
         playerInput = new PlayerInputActions();
@@ -29,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
         playerInput.Character.Rotate.performed += ctx => Rotate(ctx.ReadValue<float>());
 
         InitializePlayerPostition();
+
+        // initialize footsteps
+        playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerFootsteps);
     }
 
     private void InitializePlayerPostition()
@@ -48,14 +59,8 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPos, speed * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, speed * Time.deltaTime);
-    }
 
-    private void HandleInput(Vector2 input)
-    {
-        if (input.x != 0)
-        {
-            Rotate(input.x);
-        }
+        UpdateSound();
     }
 
     public void SetNewDestination(Cell cell)
@@ -80,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
-        if(lastBeatTime + beatOffsetTime > Time.time) Debug.Log("Moved on beat!");
+        if (lastBeatTime + beatOffsetTime > Time.time) Debug.Log("Moved on beat!");
 
         prevCell = currentCell;
 
@@ -123,10 +128,41 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if(prevCell != currentCell) { currentCell.OnEnterCell.Invoke(); }
+        if (prevCell != currentCell) { currentCell.OnEnterCell.Invoke(); }
     }
 
-    public void SetBeatTime(){
+    public void SetBeatTime()
+    {
         lastBeatTime = Time.time;
+    }
+
+    public void UpdateSound()
+    {
+        // if moving play footsteps
+        Vector3 currentPosition = transform.position;
+        if (previousPosition != null)
+        {
+            float distanceTravelled = Vector3.Distance(previousPosition, currentPosition);
+            float timeTaken = Time.deltaTime;
+            velocity = distanceTravelled / timeTaken;
+        }
+        previousPosition = currentPosition;
+
+        if (velocity > 0.1f)
+        {
+            if (!playerFootsteps.isValid())
+            {
+                PLAYBACK_STATE playbackState;
+                playerFootsteps.getPlaybackState(out playbackState);
+                if (playbackState != PLAYBACK_STATE.PLAYING)
+                {
+                    playerFootsteps.start();
+                }
+            }
+        }
+        else
+        {
+            playerFootsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
     }
 }
