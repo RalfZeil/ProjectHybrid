@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     private Cell prevCell;
     private Cell currentCell;
 
+    //beatsync
+    public float beatOffsetTime;
+    private float lastBeatTime;
+
     private void Start()
     {
         playerInput = new PlayerInputActions();
@@ -76,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
+        if(lastBeatTime + beatOffsetTime > Time.time) Debug.Log("Moved on beat!");
+
         prevCell = currentCell;
 
         if (inputY > 0) // Move forward TODO: Move forward instead of always going to a specific wind direction
@@ -118,5 +124,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(prevCell != currentCell) { currentCell.OnEnterCell.Invoke(); }
+    }
+
+    public void SetBeatTime(){
+        lastBeatTime = Time.time;
     }
 }
