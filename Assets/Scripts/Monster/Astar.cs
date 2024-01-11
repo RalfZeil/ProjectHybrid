@@ -89,13 +89,13 @@ public class Astar : MonoBehaviour
             // Check each neighbouring Node
             foreach (Node neighbour in newNeighbourNodes)
             {
+                neighbour.parent = lowestFNode;
+
                 if (neighbour.position == endPos)
                 {
                     endNode = neighbour;
                     break;
                 }
-
-                neighbour.parent = lowestFNode;
             }
 
             openList.Remove(lowestFNode);
