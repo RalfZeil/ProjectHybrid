@@ -1,8 +1,5 @@
-using System;
 using UnityEngine;
-using UnityEngine.Windows;
 using FMOD.Studio;
-using UnityEditor.Callbacks;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -150,19 +147,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (velocity > 0.1f)
         {
-            if (!playerFootsteps.isValid())
+            PLAYBACK_STATE playbackState;
+            playerFootsteps.getPlaybackState(out playbackState);
+
+            if (playbackState != PLAYBACK_STATE.PLAYING)
             {
-                PLAYBACK_STATE playbackState;
-                playerFootsteps.getPlaybackState(out playbackState);
-                if (playbackState != PLAYBACK_STATE.PLAYING)
-                {
-                    playerFootsteps.start();
-                }
+                // Update 3D attributes if necessary
+                FMOD.ATTRIBUTES_3D attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
+                playerFootsteps.set3DAttributes(attributes);
+
+                playerFootsteps.start();
             }
         }
         else
         {
-            playerFootsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
         }
     }
 }

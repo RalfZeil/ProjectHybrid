@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../FMod/Project Hybrid/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638405867639579685
+  lastModified: 638407509203276612
   FileSizes:
   - Name: Desktop
-    Value: 49888
+    Value: 68960
   Exists: 1
 --- !u!114 &-5972010717887637952
 MonoBehaviour:
@@ -35,11 +35,38 @@ MonoBehaviour:
   Path: ../FMod/Project Hybrid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638405895470510210
+  lastModified: 638407509201855036
   FileSizes:
   - Name: Desktop
-    Value: 1006
+    Value: 1054
   Exists: 1
+--- !u!114 &-1670081123559803809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ploppie
+  m_EditorClassIdentifier: 
+  Path: event:/Ploppie
+  Guid:
+    Data1: -1013242092
+    Data2: 1317664384
+    Data3: -1564223589
+    Data4: 1310293754
+  Banks:
+  - {fileID: -9073359611269854195}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,12 +87,13 @@ MonoBehaviour:
   - {fileID: 9130253891254940131}
   EditorEvents:
   - {fileID: 7558531810688073487}
+  - {fileID: -1670081123559803809}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7314195757609957359}
   StringsBanks:
   - {fileID: -5972010717887637952}
-  cacheTime: 638405895470510210
+  cacheTime: 638407509203276612
   cacheVersion: 131616
 --- !u!114 &4384580905048974265
 MonoBehaviour:
@@ -102,7 +130,7 @@ MonoBehaviour:
   Path: ../FMod/Project Hybrid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638405895470495166
+  lastModified: 638407509201836539
   FileSizes:
   - Name: Desktop
     Value: 1486
