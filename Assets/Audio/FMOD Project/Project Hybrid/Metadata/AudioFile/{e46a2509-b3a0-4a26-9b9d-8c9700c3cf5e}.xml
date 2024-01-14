@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e46a2509-b3a0-4a26-9b9d-8c9700c3cf5e}">
+		<property name="assetPath">
+			<value>Footsteps/Footstep 5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.48462585034013606</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f381fc71-93fc-4a82-9b4b-c3f40cb5dd32}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9073359611269854195
+--- !u!114 &-7177196794986568785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,35 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
-  Path: ../FMod/Project Hybrid/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638407509203276612
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638405887395557981
   FileSizes:
   - Name: Desktop
-    Value: 68960
-  Exists: 1
---- !u!114 &-5972010717887637952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMod/Project Hybrid/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638407509201855036
-  FileSizes:
-  - Name: Desktop
-    Value: 1054
+    Value: 494
   Exists: 1
 --- !u!114 &-1670081123559803809
 MonoBehaviour:
@@ -59,7 +39,7 @@ MonoBehaviour:
     Data3: -1564223589
     Data4: 1310293754
   Banks:
-  - {fileID: -9073359611269854195}
+  - {fileID: 8713522971421956040}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -67,6 +47,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-642970766196095244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638407509201836539
+  FileSizes:
+  - Name: Desktop
+    Value: 1486
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,22 +80,42 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5972010717887637952}
-  - {fileID: 7314195757609957359}
-  - {fileID: -9073359611269854195}
-  - {fileID: 4384580905048974265}
-  - {fileID: 9130253891254940131}
+  - {fileID: 3512901346129175594}
+  - {fileID: 5819443156647996435}
+  - {fileID: -642970766196095244}
+  - {fileID: -7177196794986568785}
+  - {fileID: 8713522971421956040}
   EditorEvents:
   - {fileID: 7558531810688073487}
   - {fileID: -1670081123559803809}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7314195757609957359}
+  - {fileID: -642970766196095244}
   StringsBanks:
-  - {fileID: -5972010717887637952}
+  - {fileID: 3512901346129175594}
   cacheTime: 638407509203276612
   cacheVersion: 131616
---- !u!114 &4384580905048974265
+--- !u!114 &3512901346129175594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638407509201855036
+  FileSizes:
+  - Name: Desktop
+    Value: 1054
+  Exists: 1
+--- !u!114 &5819443156647996435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,33 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Ambience.bank
   m_EditorClassIdentifier: 
-  Path: ../FMod/Project Hybrid/Build/Desktop/Ambience.bank
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
   lastModified: 638405887395594489
   FileSizes:
   - Name: Desktop
     Value: 494
-  Exists: 1
---- !u!114 &7314195757609957359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMod/Project Hybrid/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638407509201836539
-  FileSizes:
-  - Name: Desktop
-    Value: 1486
   Exists: 1
 --- !u!114 &7558531810688073487
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
     Data3: -25774927
     Data4: 1395554982
   Banks:
-  - {fileID: -9073359611269854195}
+  - {fileID: 8713522971421956040}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 507
---- !u!114 &9130253891254940131
+--- !u!114 &8713522971421956040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: ../FMod/Project Hybrid/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638405887395557981
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638407509203276612
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 68960
   Exists: 1

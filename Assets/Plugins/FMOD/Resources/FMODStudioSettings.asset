@@ -535,8 +535,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../FMod/Project Hybrid/Project Hybrid.fspro
-  sourceBankPath: ../FMod/Project Hybrid/Build
+  sourceProjectPath: Assets/Audio/FMOD Project/Project Hybrid/Project Hybrid.fspro
+  sourceBankPath: Assets/Audio/FMOD Project/Project Hybrid/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
