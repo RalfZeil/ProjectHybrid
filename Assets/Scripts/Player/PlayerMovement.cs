@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // sound related variables
     private Vector3 previousPosition;
     private float velocity;
+    [SerializeField] private float velocitySoundThreshold = 0.2f;
     private EventInstance playerFootsteps;
 
     private void Start()
@@ -145,7 +146,10 @@ public class PlayerMovement : MonoBehaviour
         }
         previousPosition = currentPosition;
 
-        if (velocity > 0.1f)
+        FMOD.ATTRIBUTES_3D attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
+        playerFootsteps.set3DAttributes(attributes);
+
+        if (velocity > velocitySoundThreshold)
         {
             PLAYBACK_STATE playbackState;
             playerFootsteps.getPlaybackState(out playbackState);
@@ -153,8 +157,6 @@ public class PlayerMovement : MonoBehaviour
             if (playbackState != PLAYBACK_STATE.PLAYING)
             {
                 // Update 3D attributes if necessary
-                FMOD.ATTRIBUTES_3D attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
-                playerFootsteps.set3DAttributes(attributes);
 
                 playerFootsteps.start();
             }
