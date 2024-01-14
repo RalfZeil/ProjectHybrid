@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float velocity;
     [SerializeField] private float velocitySoundThreshold = 0.2f;
     private EventInstance playerFootsteps;
+    private FMOD.ATTRIBUTES_3D attributes;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         // initialize footsteps
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerFootsteps);
+        attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
     }
 
     private void InitializePlayerPostition()
@@ -146,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
         }
         previousPosition = currentPosition;
 
-        FMOD.ATTRIBUTES_3D attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
+
         playerFootsteps.set3DAttributes(attributes);
 
         if (velocity > velocitySoundThreshold)
@@ -156,8 +158,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (playbackState != PLAYBACK_STATE.PLAYING)
             {
-                // Update 3D attributes if necessary
-
                 playerFootsteps.start();
             }
         }
