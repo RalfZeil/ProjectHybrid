@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Workspace" id="{c644ac43-0298-49bf-ace4-2be20daf146e}">
-		<property name="builtBanksOutputDirectory">
-			<value>../../ProjectHybrid/Assets/Audio/Banks</value>
-		</property>
+		<property name="builtBanksOutputDirectory" />
+		<property name="builtBanksEncryptionKey" />
 		<relationship name="masterEventFolder">
 			<destination>{585de0f8-b705-43eb-a69d-4beff9e38578}</destination>
 		</relationship>

@@ -1,6 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7177196794986568785
+--- !u!114 &-8682084551901517048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Kids Playing
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Kids Playing
+  Guid:
+    Data1: -323997696
+    Data2: 1156250626
+    Data3: -1506344055
+    Data4: 732739858
+  Banks:
+  - {fileID: -5840031339851162624}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5840031339851162624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
+  Name: Ambience
+  StudioPath: bank:/Ambience
+  lastModified: 638409200581204929
+  FileSizes:
+  - Name: Desktop
+    Value: 1260864
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6944605805696160125}
+  - {fileID: -5840031339851162624}
+  - {fileID: 3910497185165739974}
+  - {fileID: 2470371521619792906}
+  - {fileID: 1760719235639403656}
+  EditorEvents:
+  - {fileID: -8682084551901517048}
+  - {fileID: 7717776041466224302}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3910497185165739974}
+  StringsBanks:
+  - {fileID: 6944605805696160125}
+  cacheTime: 638409200581294229
+  cacheVersion: 131616
+--- !u!114 &1760719235639403656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638409200581294229
+  FileSizes:
+  - Name: Desktop
+    Value: 49888
+  Exists: 1
+--- !u!114 &2470371521619792906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,34 +115,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 494
   Exists: 1
---- !u!114 &-1670081123559803809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ploppie
-  m_EditorClassIdentifier: 
-  Path: event:/Ploppie
-  Guid:
-    Data1: -1013242092
-    Data2: 1317664384
-    Data3: -1564223589
-    Data4: 1310293754
-  Banks:
-  - {fileID: 8713522971421956040}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-642970766196095244
+--- !u!114 &3910497185165739974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,35 +135,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1486
   Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 3512901346129175594}
-  - {fileID: 5819443156647996435}
-  - {fileID: -642970766196095244}
-  - {fileID: -7177196794986568785}
-  - {fileID: 8713522971421956040}
-  EditorEvents:
-  - {fileID: 7558531810688073487}
-  - {fileID: -1670081123559803809}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -642970766196095244}
-  StringsBanks:
-  - {fileID: 3512901346129175594}
-  cacheTime: 638408340812365634
-  cacheVersion: 131616
---- !u!114 &3512901346129175594
+--- !u!114 &6944605805696160125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,32 +150,12 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638408340812355662
+  lastModified: 638409200581244370
   FileSizes:
   - Name: Desktop
-    Value: 1054
+    Value: 1074
   Exists: 1
---- !u!114 &5819443156647996435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
-  Name: Ambience
-  StudioPath: bank:/Ambience
-  lastModified: 638408340812345688
-  FileSizes:
-  - Name: Desktop
-    Value: 494
-  Exists: 1
---- !u!114 &7558531810688073487
+--- !u!114 &7717776041466224302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,16 +165,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PlayerFootsteps
+  m_Name: event:/SFX/PlayerFootsteps
   m_EditorClassIdentifier: 
-  Path: event:/PlayerFootsteps
+  Path: event:/SFX/PlayerFootsteps
   Guid:
     Data1: 1247815133
     Data2: 1180956726
     Data3: -25774927
     Data4: 1395554982
   Banks:
-  - {fileID: 8713522971421956040}
+  - {fileID: 1760719235639403656}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -162,23 +182,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 507
---- !u!114 &8713522971421956040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638408340812365634
-  FileSizes:
-  - Name: Desktop
-    Value: 68960
-  Exists: 1
