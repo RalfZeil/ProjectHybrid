@@ -134,7 +134,8 @@ PrefabInstance:
     - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: _serializedBlackboard
       value: '{"_variables":{"Player":{"_value":1,"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SeesPlayer":{"_name":"SeesPlayer","_id":"ad3dae0c-b782-4eb4-a45c-c6eb69ad83db","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
       objectReference: {fileID: 0}
     - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: _objectReferences.Array.size
@@ -145,9 +146,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1862682994}
     - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedVariables.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: _serializedVariables.Array.data[0]._json
       value: '{"_value":1,"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+      propertyPath: _serializedVariables.Array.data[1]._json
+      value: '{"_name":"SeesPlayer","_id":"ad3dae0c-b782-4eb4-a45c-c6eb69ad83db","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 4298564501897202537, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: _serializedVariables.Array.data[0]._references.Array.size
@@ -224,6 +234,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37fff2bf4f164a24ca34a15ce8017545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCell: {fileID: 1068620200}
+--- !u!114 &1068620200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6834463733627384673, guid: a574949497aff9f4ab45e47527f19464, type: 3}
+  m_PrefabInstance: {fileID: 7962790835868774770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e085d1236f8232488438a39acedecfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1862682993
