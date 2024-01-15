@@ -4,6 +4,8 @@ using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     private PlayerInputActions playerInput;
 
     private float speed = 5f;
@@ -14,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private int currentRotationIndex = 0;
 
     private Cell prevCell;
-    private Cell currentCell;
+    public Cell currentCell;
 
     //beatsync
     public float beatOffsetTime;
@@ -33,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
+
         playerInput = new PlayerInputActions();
         playerInput.Enable();
 
