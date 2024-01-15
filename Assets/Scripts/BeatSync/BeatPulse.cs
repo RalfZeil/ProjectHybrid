@@ -24,10 +24,11 @@ public class BeatPulse : MonoBehaviour
     public void Pulse()
     {
         transform.localScale = originalSize * pulseAmount;
+        Debug.Log("pulsed");
     }
 
     void Shrink()
     {
-        transform.localScale = Vector3.ClampMagnitude(transform.localScale * shrinkAmount, originalSize.magnitude);
+        transform.localScale = Vector3.Lerp(transform.localScale, originalSize, Time.deltaTime * shrinkAmount);
     }
 }
