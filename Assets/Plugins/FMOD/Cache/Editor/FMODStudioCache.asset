@@ -15,12 +15,12 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638408351412018513
+  lastModified: 638408481039130778
   FileSizes:
   - Name: Desktop
     Value: 494
   Exists: 1
---- !u!114 &-1670081123559803809
+--- !u!114 &-4185399355822196939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,16 +30,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ploppie
+  m_Name: event:/Ambience/Kids Playing
   m_EditorClassIdentifier: 
-  Path: event:/Ploppie
+  Path: event:/Ambience/Kids Playing
   Guid:
-    Data1: -1013242092
-    Data2: 1317664384
-    Data3: -1564223589
-    Data4: 1310293754
+    Data1: -323997696
+    Data2: 1156250626
+    Data3: -1506344055
+    Data4: 732739858
   Banks:
-  - {fileID: 8713522971421956040}
+  - {fileID: 5819443156647996435}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638408351412008502
+  lastModified: 638408482815488206
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -86,15 +86,42 @@ MonoBehaviour:
   - {fileID: -7177196794986568785}
   - {fileID: 8713522971421956040}
   EditorEvents:
-  - {fileID: 7558531810688073487}
-  - {fileID: -1670081123559803809}
+  - {fileID: -4185399355822196939}
+  - {fileID: 3422538633385006945}
   EditorParameters: []
   MasterBanks:
   - {fileID: -642970766196095244}
   StringsBanks:
   - {fileID: 3512901346129175594}
-  cacheTime: 638408351412023506
+  cacheTime: 638408482815812885
   cacheVersion: 131616
+--- !u!114 &3422538633385006945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/PlayerFootsteps
+  Guid:
+    Data1: 1247815133
+    Data2: 1180956726
+    Data3: -25774927
+    Data4: 1395554982
+  Banks:
+  - {fileID: 8713522971421956040}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 507
 --- !u!114 &3512901346129175594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +137,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638408351412013503
+  lastModified: 638408482815493239
   FileSizes:
   - Name: Desktop
-    Value: 1054
+    Value: 1074
   Exists: 1
 --- !u!114 &5819443156647996435
 MonoBehaviour:
@@ -130,38 +157,11 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638408351411998463
+  lastModified: 638408481038808169
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 1260864
   Exists: 1
---- !u!114 &7558531810688073487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PlayerFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/PlayerFootsteps
-  Guid:
-    Data1: 1247815133
-    Data2: 1180956726
-    Data3: -25774927
-    Data4: 1395554982
-  Banks:
-  - {fileID: 8713522971421956040}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 507
 --- !u!114 &8713522971421956040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +177,8 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638408351412023506
+  lastModified: 638408482815812885
   FileSizes:
   - Name: Desktop
-    Value: 68960
+    Value: 49888
   Exists: 1
