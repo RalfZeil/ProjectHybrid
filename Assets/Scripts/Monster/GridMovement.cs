@@ -1,14 +1,20 @@
+using NodeCanvas.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GridMovement : MonoBehaviour
 {
+    //Behaviour
+    private Blackboard bb;
+    private bool foundPlayer;
+
     Astar astar;
 
     private float speed = 5f;
-    private float moveDelay = 1f;
+    private const float moveDelay = 1f;
+    private float timer = 1f;
 
-    private Cell startCell;
+    [SerializeField] private Cell startCell;
     private Vector3 targetPos;
     private Quaternion targetRot;
     private float[] rotationAngles = new float[] { 0, 90, 180, 270 };
@@ -22,9 +28,11 @@ public class GridMovement : MonoBehaviour
 
     private void Start()
     {
+        bb = GetComponent<Blackboard>();    
         astar = new Astar();
 
         currentCell = startCell;
+        targetPos = currentCell.transform.position;
     }
 
     private void Update()
@@ -32,13 +40,31 @@ public class GridMovement : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPos, speed * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, speed * Time.deltaTime);
 
-        if((path.Count > currentPathIndex) && moveDelay < 0)
+        if (bb.GetVariableValue<bool>("SeesPlayer"))
         {
-            SetNewDestination();
+            if (!foundPlayer)
+            {
+                FindNewPath(PlayerMovement.Instance.currentCell);
+            }
+            foundPlayer = true;
         }
         else
         {
-            moveDelay -= Time.deltaTime;
+            foundPlayer= false;
+        }
+
+        if(timer < 0)
+        {
+            if((path.Count > currentPathIndex))
+            {
+                SetNewDestination();
+            }
+            
+            timer = moveDelay;
+        }
+        else
+        {
+            timer -= Time.deltaTime;
         }
     }
 
@@ -50,12 +76,13 @@ public class GridMovement : MonoBehaviour
             GameGrid.Instance.grid);
         currentPathIndex = 0;
 
-        currentCell = GameGrid.Instance.GetCellWithPosition(path[0]);
+        currentCell = GameGrid.Instance.GetCellWithPosition(path[currentPathIndex]);
     }
 
     private void SetNewDestination()
     {
         currentPathIndex++;
         currentCell = GameGrid.Instance.GetCellWithPosition(path[currentPathIndex]);
+        targetPos = currentCell.transform.position;
     }
 }
