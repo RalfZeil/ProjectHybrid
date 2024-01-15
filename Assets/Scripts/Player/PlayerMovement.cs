@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     //beatsync
     public float beatOffsetTime;
     private float lastBeatTime;
+    public UnityEvent onBeatMove;
+    public UnityEvent offBeatMove;
 
 
     // sound related variables
@@ -26,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float velocitySoundThreshold = 0.2f;
     private EventInstance playerFootsteps;
     private FMOD.ATTRIBUTES_3D attributes;
+    private Transform FootstepsReferenceLocation;
 
     private void Start()
     {
@@ -38,8 +42,10 @@ public class PlayerMovement : MonoBehaviour
         InitializePlayerPostition();
 
         // initialize footsteps
+        FootstepsReferenceLocation = transform.Find("FootstepsReferenceLocation");
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerFootsteps);
-        attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
+        attributes = FMODUnity.RuntimeUtils.To3DAttributes(FootstepsReferenceLocation);
+        playerFootsteps.set3DAttributes(attributes);
     }
 
     private void InitializePlayerPostition()
@@ -85,7 +91,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
-        if (lastBeatTime + beatOffsetTime > Time.time) Debug.Log("Moved on beat!");
+        if (lastBeatTime + beatOffsetTime > Time.time)
+        {
+            onBeatMove.Invoke();
+        }
+        else
+        {
+            offBeatMove.Invoke();
+        }
 
         prevCell = currentCell;
 
@@ -149,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
         previousPosition = currentPosition;
 
 
+        attributes = FMODUnity.RuntimeUtils.To3DAttributes(FootstepsReferenceLocation);
         playerFootsteps.set3DAttributes(attributes);
 
         if (velocity > velocitySoundThreshold)
