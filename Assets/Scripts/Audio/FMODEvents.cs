@@ -7,7 +7,7 @@ using FMOD.Studio;
 public class FMODEvents : MonoBehaviour
 {
     [field: Header("Ambience")]
-    [field: SerializeField] public EventReference ambience { get; private set; }
+    [field: SerializeField] public EventReference kidsPlaying { get; private set; }
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
@@ -16,6 +16,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference playerFootsteps { get; private set; }
 
     public static FMODEvents instance { get; private set; }
+    private Dictionary<string, string> events;
 
     private void Awake()
     {
@@ -25,6 +26,12 @@ public class FMODEvents : MonoBehaviour
         }
         instance = this;
 
+        events = new Dictionary<string, string>
+        {
+            { "playerFootsteps", "event:/Footsteps" },
+            // Add more events here
+        };
 
     }
+
 }

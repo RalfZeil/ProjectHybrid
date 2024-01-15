@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         // initialize footsteps
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerFootsteps);
         attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
+        playerFootsteps.set3DAttributes(attributes);
     }
 
     private void InitializePlayerPostition()
@@ -149,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
         previousPosition = currentPosition;
 
 
+        attributes = FMODUnity.RuntimeUtils.To3DAttributes(gameObject);
         playerFootsteps.set3DAttributes(attributes);
 
         if (velocity > velocitySoundThreshold)
