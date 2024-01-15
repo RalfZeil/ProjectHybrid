@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638408351412018513
+  lastModified: 638408340812365634
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638408351412008502
+  lastModified: 638408340812355662
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -93,7 +93,7 @@ MonoBehaviour:
   - {fileID: -642970766196095244}
   StringsBanks:
   - {fileID: 3512901346129175594}
-  cacheTime: 638408351412023506
+  cacheTime: 638408340812365634
   cacheVersion: 131616
 --- !u!114 &3512901346129175594
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638408351412013503
+  lastModified: 638408340812355662
   FileSizes:
   - Name: Desktop
     Value: 1054
@@ -130,7 +130,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638408351411998463
+  lastModified: 638408340812345688
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638408351412023506
+  lastModified: 638408340812365634
   FileSizes:
   - Name: Desktop
     Value: 68960
