@@ -29,7 +29,6 @@ public class BeatSync : MonoBehaviour
     private int currentInstrumentLevel = 0; // New field to track current level of instruments
     private Dictionary<Instrument, EventInstance> instrumentEvents;
     private FMOD.ATTRIBUTES_3D attributes;
-    public Image beatImage; // Reference to the Image UI element
 
     // Define your beat patterns here
     private Dictionary<Instrument, int[]> beatPatterns;
@@ -67,7 +66,6 @@ public class BeatSync : MonoBehaviour
             //{ Instrument.Bass, new[] { 1, 1, 1, 1 } },
             // Define other patterns
         };
-        beatImage.enabled = false; // Start with the image hidden
 
         playerInput = new PlayerInputActions();
         playerInput.Enable();
@@ -98,7 +96,7 @@ public class BeatSync : MonoBehaviour
 
     private void PlayInstrumentsOnBeat(int beat)
     {
-        StartCoroutine(ShowBeatImage());
+        OnBeat.Invoke();
         foreach (var instrument in beatPatterns.Keys)
         {
             if (beatPatterns[instrument][beat] == 1)
@@ -115,14 +113,6 @@ public class BeatSync : MonoBehaviour
             eventInstance.stop(STOP_MODE.IMMEDIATE);
             eventInstance.start();
         }
-    }
-
-
-    IEnumerator ShowBeatImage()
-    {
-        beatImage.enabled = true; // Show the image
-        yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds
-        beatImage.enabled = false; // Hide the image
     }
 
     float GetEventPlaybackTime()

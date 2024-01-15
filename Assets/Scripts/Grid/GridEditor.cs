@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEngine;
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(GameGrid))]
@@ -8,20 +9,20 @@ public class GridEditor : Editor
     {
         DrawDefaultInspector();
 
-        //GUILayout.BeginHorizontal();
+        GUILayout.BeginHorizontal();
 
-        //GameGrid grid = (GameGrid)target;
-        //if (GUILayout.Button("Generate Grid"))
-        //{
-        //    grid.GenerateGrid();
-        //}
+        GameGrid grid = (GameGrid)target;
+        if (GUILayout.Button("Generate Grid"))
+        {
+            grid.GenerateGrid();
+        }
 
-        //if (GUILayout.Button("Delete Grid"))
-        //{
-        //    grid.DeleteGrid();
-        //}
+        if (GUILayout.Button("Delete Grid"))
+        {
+            grid.DeleteGrid();
+        }
 
-        //GUILayout.EndHorizontal();
+        GUILayout.EndHorizontal();
     }
 }
 #endif
