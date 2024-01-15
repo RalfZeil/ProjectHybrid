@@ -37,6 +37,11 @@ public class GameGrid : MonoBehaviour
         }
     }
 
+    public Cell GetCellWithPosition(Vector2Int pos)
+    {
+        return grid[pos.x, pos.y];
+    }
+
     /// <summary>
     /// Returns the first cell with the PlayerStart bool thats true
     /// </summary>
