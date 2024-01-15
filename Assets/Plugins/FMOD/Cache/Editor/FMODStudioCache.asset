@@ -15,12 +15,12 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638408481039130778
+  lastModified: 638409183314870534
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 8352
   Exists: 1
---- !u!114 &-4185399355822196939
+--- !u!114 &-1570162362444243109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,16 +30,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Kids Playing
+  m_Name: event:/Music/Kick
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Kids Playing
+  Path: event:/Music/Kick
   Guid:
-    Data1: -323997696
-    Data2: 1156250626
-    Data3: -1506344055
-    Data4: 732739858
+    Data1: 1430091257
+    Data2: 1185210416
+    Data3: -502076024
+    Data4: 831591717
   Banks:
-  - {fileID: 5819443156647996435}
+  - {fileID: -7177196794986568785}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638408482815488206
+  lastModified: 638409183313991501
   FileSizes:
   - Name: Desktop
     Value: 1486
@@ -86,14 +86,15 @@ MonoBehaviour:
   - {fileID: -7177196794986568785}
   - {fileID: 8713522971421956040}
   EditorEvents:
-  - {fileID: -4185399355822196939}
   - {fileID: 3422538633385006945}
+  - {fileID: 4049685744538884469}
+  - {fileID: -1570162362444243109}
   EditorParameters: []
   MasterBanks:
   - {fileID: -642970766196095244}
   StringsBanks:
   - {fileID: 3512901346129175594}
-  cacheTime: 638408482815812885
+  cacheTime: 638409213342250193
   cacheVersion: 131616
 --- !u!114 &3422538633385006945
 MonoBehaviour:
@@ -137,11 +138,38 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638408482815493239
+  lastModified: 638409183314021737
   FileSizes:
   - Name: Desktop
-    Value: 1074
+    Value: 1114
   Exists: 1
+--- !u!114 &4049685744538884469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/KidsPlaying
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/KidsPlaying
+  Guid:
+    Data1: 2029733434
+    Data2: 1312629934
+    Data3: 1915618727
+    Data4: -353790464
+  Banks:
+  - {fileID: 5819443156647996435}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108360
 --- !u!114 &5819443156647996435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,10 +185,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638408481038808169
+  lastModified: 638409163774845037
   FileSizes:
   - Name: Desktop
-    Value: 1260864
+    Value: 1260896
   Exists: 1
 --- !u!114 &8713522971421956040
 MonoBehaviour:
@@ -177,7 +205,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMOD Project/Project Hybrid/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638408482815812885
+  lastModified: 638409213342250193
   FileSizes:
   - Name: Desktop
     Value: 49888
