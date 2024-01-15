@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using FMOD.Studio;
 
 public class PlayerMovement : MonoBehaviour
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     //beatsync
     public float beatOffsetTime;
     private float lastBeatTime;
+    public UnityEvent onBeatMove;
+    public UnityEvent offBeatMove;
 
 
     // sound related variables
@@ -86,7 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(float inputY)
     {
-        if (lastBeatTime + beatOffsetTime > Time.time) Debug.Log("Moved on beat!");
+        if (lastBeatTime + beatOffsetTime > Time.time){
+            onBeatMove.Invoke();
+        }
+        else{
+            offBeatMove.Invoke();
+        }
 
         prevCell = currentCell;
 
