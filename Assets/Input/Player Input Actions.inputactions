@@ -33,9 +33,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "OpenDoor",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "3de4a747-f3aa-4800-9b2f-b75761ea32a9",
+                    "id": "b2d77683-4a6b-4892-8ecc-90db3b8d48cc",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -441,34 +441,12 @@
                 },
                 {
                     "name": "",
-                    "id": "301f8cea-0a40-4283-a24b-b1d3aa80e539",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenDoor",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "49bff487-2a92-4512-ba42-e0323aace8b5",
+                    "id": "f57ec13d-9a10-4c48-8a45-798ffd3a1f66",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OpenDoor",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "206bfa0b-3e7d-47da-a973-ec1616a55f2b",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenDoor",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
