@@ -63,7 +63,7 @@ public class Cell : MonoBehaviour
                 }
 
                 Cell canditateCell = grid[cellX, cellY];
-
+                if (canditateCell == null) { continue; } 
                 if (canditateCell.gridPosition.y > this.gridPosition.y && (canditateCell.HasWall(Wall.DOWN) || this.HasWall(Wall.UP))) { continue; }
                 if (canditateCell.gridPosition.y < this.gridPosition.y && (canditateCell.HasWall(Wall.UP) || this.HasWall(Wall.DOWN))) { continue; }
                 if (canditateCell.gridPosition.x > this.gridPosition.x && (canditateCell.HasWall(Wall.LEFT) || this.HasWall(Wall.RIGHT))) { continue; }

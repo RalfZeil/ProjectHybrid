@@ -17,14 +17,11 @@ public class GridMovement : MonoBehaviour
     [SerializeField] private Cell startCell;
     private Vector3 targetPos;
     private Quaternion targetRot;
-    private float[] rotationAngles = new float[] { 0, 90, 180, 270 };
-    private int currentRotationIndex = 0;
 
     private Cell prevCell;
     private Cell currentCell;
 
-    private List<Vector2Int> path;
-    private int currentPathIndex;
+    private Queue<Vector2Int> path = new Queue<Vector2Int>();
 
     private void Start()
     {
@@ -37,6 +34,8 @@ public class GridMovement : MonoBehaviour
 
     private void Update()
     {
+        if (path.Count > 0) { Debug.Log(path.Peek()); }
+
         transform.position = Vector3.Lerp(transform.position, targetPos, speed * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, speed * Time.deltaTime);
 
@@ -55,9 +54,14 @@ public class GridMovement : MonoBehaviour
 
         if(timer < 0)
         {
-            if((path.Count > currentPathIndex))
+            if((path.Count > 0))
             {
                 SetNewDestination();
+
+                if (foundPlayer)
+                {
+                    FindNewPath(PlayerMovement.Instance.currentCell);
+                } 
             }
             
             timer = moveDelay;
@@ -70,19 +74,18 @@ public class GridMovement : MonoBehaviour
 
     public void FindNewPath(Cell cell)
     {
-        path = astar.FindPathToTarget(
-            new Vector2Int(startCell.gridPosition.x, startCell.gridPosition.y), 
-            new Vector2Int(cell.gridPosition.x, cell.gridPosition.y), 
-            GameGrid.Instance.grid);
-        currentPathIndex = 0;
+        path = new Queue<Vector2Int>(astar.FindPathToTarget(
+            new Vector2Int(startCell.gridPosition.x, startCell.gridPosition.y),
+            new Vector2Int(cell.gridPosition.x, cell.gridPosition.y),
+            GameGrid.Instance.grid));
 
-        currentCell = GameGrid.Instance.GetCellWithPosition(path[currentPathIndex]);
+        currentCell = GameGrid.Instance.GetCellWithPosition(path.Dequeue());
     }
 
     private void SetNewDestination()
     {
-        currentPathIndex++;
-        currentCell = GameGrid.Instance.GetCellWithPosition(path[currentPathIndex]);
+        currentCell = GameGrid.Instance.GetCellWithPosition(path.Dequeue());
         targetPos = currentCell.transform.position;
+        targetRot = Quaternion.Euler(currentCell.transform.position - transform.position);
     }
 }
