@@ -24,7 +24,7 @@ public class BeatPulse : MonoBehaviour
     public void Pulse()
     {
         transform.localScale = originalSize * pulseAmount;
-        Debug.Log("pulsed");
+        Debug.Log("Beat");
     }
 
     void Shrink()
