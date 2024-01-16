@@ -1,12 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using FMOD.Studio;
+using FMODUnity;
 
 public class playKick : MonoBehaviour
 {
 
     Image imageKick;
     Animator animatorKick;
+    PlayerInputActions playerInputActions;
+
+    private EventInstance audioEventInstance;
+    private FMOD.ATTRIBUTES_3D attributes;
+    private GameObject player;
+
 
     void Start()
     {
@@ -15,23 +23,42 @@ public class playKick : MonoBehaviour
         //hide both 
         imageKick.enabled = false;
         animatorKick.enabled = false;
+        //bind interact to kick
+        playerInputActions = new PlayerInputActions();
+        playerInputActions.Enable();
+        playerInputActions.Character.Interact.performed += ctx => KickOpenDoor();
+        audioEventInstance = AudioManager.instance.CreateEventInstance(FMODEvents.instance.kickDoor);
+        player = GameObject.FindGameObjectWithTag("Player");
+        attributes = RuntimeUtils.To3DAttributes(player);
+        audioEventInstance.set3DAttributes(attributes);
     }
 
-    void Update()
+    void OnDestroy()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Enable the Image and Animator components
-            imageKick.enabled = true;
-            animatorKick.enabled = true;
+        playerInputActions.Disable();
+        playerInputActions.Character.Interact.performed -= ctx => KickOpenDoor();
+    }
 
-            // Play the animation
-            animatorKick.Play("kickAnim", -1, 0f);
+    public void KickOpenDoor()
+    {
 
-            // Schedule a coroutine to disable the components after the animation has finished
-            float animationLength = animatorKick.GetCurrentAnimatorStateInfo(0).length;
-            StartCoroutine(DisableComponentsAfterDelay(animationLength));
-        }
+        // Enable the Image and Animator components
+        imageKick.enabled = true;
+        animatorKick.enabled = true;
+        player = GameObject.FindGameObjectWithTag("Player");
+        attributes = RuntimeUtils.To3DAttributes(player);
+        audioEventInstance.set3DAttributes(attributes);
+        audioEventInstance.start();
+
+        // Play the animation
+        animatorKick.Play("kickAnim", -1, 0f);
+
+        // Schedule a coroutine to disable the components after the animation has finished
+        float animationLength = animatorKick.GetCurrentAnimatorStateInfo(0).length;
+        StartCoroutine(DisableComponentsAfterDelay(animationLength));
+        // play oneshot sound with fmod
+        //AudioManager.instance.PlayOneShot(FMODEvents.instance.kickDoor, transform.position);
+
     }
 
     IEnumerator DisableComponentsAfterDelay(float delay)

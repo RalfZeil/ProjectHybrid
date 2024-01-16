@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{ae117249-5667-4ae7-bf02-8cec24b0971c}">
+	<object class="AudioFile" id="{1ce459b6-17d7-4b2b-bc79-fe232bc94dc7}">
 		<property name="assetPath">
-			<value>fart.wav</value>
+			<value>KickDoor.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.9612083333333334</value>
+			<value>2.4315625000000001</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{f381fc71-93fc-4a82-9b4b-c3f40cb5dd32}</destination>

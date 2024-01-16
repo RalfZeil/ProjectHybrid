@@ -15,17 +15,10 @@ public class openDoor : MonoBehaviour
         animator.enabled = false;
     }
 
-    void Update()
+    public void OpenDoorAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Enable the Image and Animator components
-
-            // Play the animation
-            animator.Play("kickAnim", -1, 0f);
-
-
-        }
+        animator.enabled = true;
+        animator.Play("openDoor");
     }
 }
 
