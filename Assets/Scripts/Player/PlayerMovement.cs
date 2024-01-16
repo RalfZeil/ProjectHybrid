@@ -104,10 +104,12 @@ public class PlayerMovement : MonoBehaviour
         if (lastBeatTime + beatOffsetTime > Time.time)
         {
             onBeatMove.Invoke();
+            Debug.Log("Moved ON beat");
         }
         else
         {
             offBeatMove.Invoke();
+            Debug.Log("Moved OFF beat");
         }
 
         prevCell = currentCell;
