@@ -18,6 +18,7 @@ public class Cell : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent OnEnterCell;
+    public UnityEvent OnPlayerInteraction;
 
     public void RemoveWall(Wall wallToRemove)
     {

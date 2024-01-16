@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
         playerInput.Character.Move.performed += ctx => Move(ctx.ReadValue<float>());
         playerInput.Character.Rotate.performed += ctx => Rotate(ctx.ReadValue<float>());
+        playerInput.Character.Interact.performed += ctx => Interact();
         #endregion
 
         InitializePlayerPostition();
@@ -54,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.playerFootsteps);
         attributes = FMODUnity.RuntimeUtils.To3DAttributes(FootstepsReferenceLocation);
         playerFootsteps.set3DAttributes(attributes);
+    }
+
+    private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void InitializePlayerPostition()
@@ -69,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
         playerInput.Character.Move.performed -= ctx => Move(ctx.ReadValue<float>());
         playerInput.Character.Rotate.performed -= ctx => Rotate(ctx.ReadValue<float>());
+        playerInput.Character.Interact.performed -= ctx => Interact();
     }
 
     private void Update()
@@ -77,6 +84,11 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, speed * Time.deltaTime);
 
         UpdateSound();
+    }
+
+    private void Interact()
+    {
+        currentCell.OnPlayerInteraction.Invoke();
     }
 
     public void SetNewDestination(Cell cell)

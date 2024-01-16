@@ -53,6 +53,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""b2d77683-4a6b-4892-8ecc-90db3b8d48cc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -451,6 +460,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ChangeBeats"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f57ec13d-9a10-4c48-8a45-798ffd3a1f66"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -462,6 +482,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
         m_Character_Rotate = m_Character.FindAction("Rotate", throwIfNotFound: true);
         m_Character_ChangeBeats = m_Character.FindAction("ChangeBeats", throwIfNotFound: true);
+        m_Character_Interact = m_Character.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -526,6 +547,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Move;
     private readonly InputAction m_Character_Rotate;
     private readonly InputAction m_Character_ChangeBeats;
+    private readonly InputAction m_Character_Interact;
     public struct CharacterActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -533,6 +555,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Character_Move;
         public InputAction @Rotate => m_Wrapper.m_Character_Rotate;
         public InputAction @ChangeBeats => m_Wrapper.m_Character_ChangeBeats;
+        public InputAction @Interact => m_Wrapper.m_Character_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -551,6 +574,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeBeats.started += instance.OnChangeBeats;
             @ChangeBeats.performed += instance.OnChangeBeats;
             @ChangeBeats.canceled += instance.OnChangeBeats;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -564,6 +590,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeBeats.started -= instance.OnChangeBeats;
             @ChangeBeats.performed -= instance.OnChangeBeats;
             @ChangeBeats.canceled -= instance.OnChangeBeats;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -586,5 +615,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnChangeBeats(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
