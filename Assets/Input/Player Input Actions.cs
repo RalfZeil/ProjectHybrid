@@ -53,6 +53,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""OpenDoor"",
+                    ""type"": ""Button"",
+                    ""id"": ""3de4a747-f3aa-4800-9b2f-b75761ea32a9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -451,6 +460,39 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""ChangeBeats"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""301f8cea-0a40-4283-a24b-b1d3aa80e539"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenDoor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49bff487-2a92-4512-ba42-e0323aace8b5"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenDoor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""206bfa0b-3e7d-47da-a973-ec1616a55f2b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenDoor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -462,6 +504,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
         m_Character_Rotate = m_Character.FindAction("Rotate", throwIfNotFound: true);
         m_Character_ChangeBeats = m_Character.FindAction("ChangeBeats", throwIfNotFound: true);
+        m_Character_OpenDoor = m_Character.FindAction("OpenDoor", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -526,6 +569,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Move;
     private readonly InputAction m_Character_Rotate;
     private readonly InputAction m_Character_ChangeBeats;
+    private readonly InputAction m_Character_OpenDoor;
     public struct CharacterActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -533,6 +577,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Character_Move;
         public InputAction @Rotate => m_Wrapper.m_Character_Rotate;
         public InputAction @ChangeBeats => m_Wrapper.m_Character_ChangeBeats;
+        public InputAction @OpenDoor => m_Wrapper.m_Character_OpenDoor;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -551,6 +596,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeBeats.started += instance.OnChangeBeats;
             @ChangeBeats.performed += instance.OnChangeBeats;
             @ChangeBeats.canceled += instance.OnChangeBeats;
+            @OpenDoor.started += instance.OnOpenDoor;
+            @OpenDoor.performed += instance.OnOpenDoor;
+            @OpenDoor.canceled += instance.OnOpenDoor;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -564,6 +612,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @ChangeBeats.started -= instance.OnChangeBeats;
             @ChangeBeats.performed -= instance.OnChangeBeats;
             @ChangeBeats.canceled -= instance.OnChangeBeats;
+            @OpenDoor.started -= instance.OnOpenDoor;
+            @OpenDoor.performed -= instance.OnOpenDoor;
+            @OpenDoor.canceled -= instance.OnOpenDoor;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -586,5 +637,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnChangeBeats(InputAction.CallbackContext context);
+        void OnOpenDoor(InputAction.CallbackContext context);
     }
 }

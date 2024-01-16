@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 targetPos;
     private Quaternion targetRot;
-    
+
     private float[] rotationAngles = new float[] { 0, 90, 180, 270 };
     private int currentRotationIndex = 0;
     [SerializeField] private int startRotationIndex = 2;
@@ -59,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
     private void InitializePlayerPostition()
     {
         SetNewDestination(currentCell = GameGrid.Instance.GetPlayerStartCell());
-        targetRot = Quaternion.Euler(0, rotationAngles[startRotationIndex], 0);
         currentRotationIndex = startRotationIndex;
+        targetRot = Quaternion.Euler(0, rotationAngles[currentRotationIndex], 0);
     }
 
     private void OnDestroy()
