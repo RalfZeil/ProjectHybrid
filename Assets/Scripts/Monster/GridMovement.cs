@@ -57,11 +57,10 @@ public class GridMovement : MonoBehaviour
             if((path.Count > 0))
             {
                 SetNewDestination();
-
-                if (foundPlayer)
-                {
-                    FindNewPath(PlayerMovement.Instance.currentCell);
-                } 
+            }
+            else if(foundPlayer)
+            {
+                FindNewPath(PlayerMovement.Instance.currentCell);
             }
             
             timer = moveDelay;
@@ -75,7 +74,7 @@ public class GridMovement : MonoBehaviour
     public void FindNewPath(Cell cell)
     {
         path = new Queue<Vector2Int>(astar.FindPathToTarget(
-            new Vector2Int(startCell.gridPosition.x, startCell.gridPosition.y),
+            new Vector2Int(currentCell.gridPosition.x, currentCell.gridPosition.y),
             new Vector2Int(cell.gridPosition.x, cell.gridPosition.y),
             GameGrid.Instance.grid));
 
