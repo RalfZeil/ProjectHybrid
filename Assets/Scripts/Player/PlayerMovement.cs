@@ -12,8 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 targetPos;
     private Quaternion targetRot;
+    
     private float[] rotationAngles = new float[] { 0, 90, 180, 270 };
     private int currentRotationIndex = 0;
+    [SerializeField] private int startRotationIndex = 2;
 
     private Cell prevCell;
     public Cell currentCell;
@@ -37,11 +39,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Instance = this;
 
+        #region Input
         playerInput = new PlayerInputActions();
         playerInput.Enable();
 
         playerInput.Character.Move.performed += ctx => Move(ctx.ReadValue<float>());
         playerInput.Character.Rotate.performed += ctx => Rotate(ctx.ReadValue<float>());
+        #endregion
 
         InitializePlayerPostition();
 
@@ -55,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     private void InitializePlayerPostition()
     {
         SetNewDestination(currentCell = GameGrid.Instance.GetPlayerStartCell());
+        targetRot = Quaternion.Euler(0, rotationAngles[startRotationIndex], 0);
+        currentRotationIndex = startRotationIndex;
     }
 
     private void OnDestroy()
@@ -98,10 +104,12 @@ public class PlayerMovement : MonoBehaviour
         if (lastBeatTime + beatOffsetTime > Time.time)
         {
             onBeatMove.Invoke();
+            Debug.Log("Moved ON beat");
         }
         else
         {
             offBeatMove.Invoke();
+            Debug.Log("Moved OFF beat");
         }
 
         prevCell = currentCell;
