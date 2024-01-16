@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,6 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23835963}
   - component: {fileID: 23835962}
+  - component: {fileID: 23835964}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -540,9 +541,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 100
-  m_SpotAngle: 32.13049
+  m_Intensity: 200
+  m_Range: 18.074135
+  m_SpotAngle: 25.680038
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -605,6 +606,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 130.084, y: 88.688, z: 78.525}
+--- !u!114 &23835964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23835961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &27575081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -805,6 +829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30964403}
   - component: {fileID: 30964402}
+  - component: {fileID: 30964404}
   m_Layer: 0
   m_Name: Spot Light (5)
   m_TagString: Untagged
@@ -824,7 +849,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 52.535892
   m_InnerSpotAngle: 21.80208
@@ -889,6 +914,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 73.658, y: -90, z: -90}
+--- !u!114 &30964404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30964401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &32058557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2262,13 +2310,14 @@ GameObject:
   m_Component:
   - component: {fileID: 125294554}
   - component: {fileID: 125294553}
+  - component: {fileID: 125294555}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &125294553
 Light:
   m_ObjectHideFlags: 0
@@ -2346,6 +2395,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &125294555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125294552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &138060986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4444,6 +4516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269535756}
   - component: {fileID: 269535755}
+  - component: {fileID: 269535757}
   m_Layer: 0
   m_Name: Spot Light (8)
   m_TagString: Untagged
@@ -4463,7 +4536,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 46.763092
   m_InnerSpotAngle: 21.80208
@@ -4528,6 +4601,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -179.942}
+--- !u!114 &269535757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269535754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &273156708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5520,6 +5616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360740590}
   - component: {fileID: 360740589}
+  - component: {fileID: 360740591}
   m_Layer: 0
   m_Name: Spot Light (7)
   m_TagString: Untagged
@@ -5539,7 +5636,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 32.13049
   m_InnerSpotAngle: 21.80208
@@ -5604,6 +5701,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 130.084, y: 268.63, z: 78.525}
+--- !u!114 &360740591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360740588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &366379242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16268,6 +16388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1134838288}
   - component: {fileID: 1134838287}
+  - component: {fileID: 1134838289}
   m_Layer: 0
   m_Name: Spot Light (2)
   m_TagString: Untagged
@@ -16287,7 +16408,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 46.763092
   m_InnerSpotAngle: 21.80208
@@ -16352,6 +16473,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1134838289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134838286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1135822868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16692,6 +16836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166035357}
   - component: {fileID: 1166035356}
+  - component: {fileID: 1166035358}
   m_Layer: 0
   m_Name: Spot Light (10)
   m_TagString: Untagged
@@ -16711,7 +16856,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 35.991226
   m_InnerSpotAngle: 6.9620175
@@ -16776,6 +16921,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 49.661, y: 269.94202, z: 90}
+--- !u!114 &1166035358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166035355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1166886556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17176,6 +17344,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e29d1cd2a6537642876d50590a4dc81, type: 3}
   m_PrefabInstance: {fileID: 1184353647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1185904448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185904450}
+  - component: {fileID: 1185904449}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1185904449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185904448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 7e935e2cae24d67449cff7cb9ca68347, type: 2}
+--- !u!4 &1185904450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185904448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3583639, y: 4.6263485, z: -55.43635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1193864317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18806,6 +19023,7 @@ GameObject:
   - component: {fileID: 1278604739}
   - component: {fileID: 1278604738}
   - component: {fileID: 1278604737}
+  - component: {fileID: 1278604740}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18880,13 +19098,57 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278604736}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.99989516, z: -0, w: 0.014481301}
-  m_LocalPosition: {x: -35.93, y: 1.86, z: -86.79}
+  m_LocalRotation: {x: -0, y: -0.96555036, z: -0, w: 0.2602161}
+  m_LocalPosition: {x: -36.76, y: 1.86, z: -89.172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -178.341, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -149.834, z: 0}
+--- !u!114 &1278604740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278604736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1291608038
 GameObject:
   m_ObjectHideFlags: 0
@@ -18897,6 +19159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291608040}
   - component: {fileID: 1291608039}
+  - component: {fileID: 1291608041}
   m_Layer: 0
   m_Name: Spot Light (9)
   m_TagString: Untagged
@@ -18916,7 +19179,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 41.316452
   m_InnerSpotAngle: 21.80208
@@ -18981,6 +19244,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 58.973, y: 89.942, z: -90}
+--- !u!114 &1291608041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291608038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1292321014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19391,6 +19677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301893656}
   - component: {fileID: 1301893655}
+  - component: {fileID: 1301893657}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -19410,7 +19697,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 50.57996
   m_InnerSpotAngle: 21.80208
@@ -19475,6 +19762,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 73.672, y: -90, z: -90}
+--- !u!114 &1301893657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301893654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1309579328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20327,6 +20637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384855896}
   - component: {fileID: 1384855895}
+  - component: {fileID: 1384855897}
   m_Layer: 0
   m_Name: Spot Light (6)
   m_TagString: Untagged
@@ -20346,7 +20657,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 50.57996
   m_InnerSpotAngle: 21.80208
@@ -20411,6 +20722,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 73.672, y: 89.942, z: -90}
+--- !u!114 &1384855897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384855894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1386719876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25749,6 +26083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815351629}
   - component: {fileID: 1815351628}
+  - component: {fileID: 1815351630}
   m_Layer: 0
   m_Name: Spot Light (4)
   m_TagString: Untagged
@@ -25768,7 +26103,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.99036205, g: 0.33490568, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 35.991226
   m_InnerSpotAngle: 6.9620175
@@ -25833,6 +26168,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 49.661, y: 90, z: 90}
+--- !u!114 &1815351630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815351627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1819731889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28449,6 +28807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953304055}
   - component: {fileID: 1953304054}
+  - component: {fileID: 1953304056}
   m_Layer: 0
   m_Name: Spot Light (3)
   m_TagString: Untagged
@@ -28468,7 +28827,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 41.316452
   m_InnerSpotAngle: 21.80208
@@ -28533,6 +28892,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 58.973, y: -90, z: -90}
+--- !u!114 &1953304056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953304053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1956326795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30216,6 +30598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073023313}
   - component: {fileID: 2073023312}
+  - component: {fileID: 2073023314}
   m_Layer: 0
   m_Name: Spot Light (11)
   m_TagString: Untagged
@@ -30235,7 +30618,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3742142, g: 0.33333337, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 250
   m_Range: 100
   m_SpotAngle: 52.535892
   m_InnerSpotAngle: 21.80208
@@ -30300,6 +30683,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 854026921}
   m_LocalEulerAnglesHint: {x: 73.658, y: 89.942, z: -90}
+--- !u!114 &2073023314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073023311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &2076443804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31470,3 +31876,4 @@ SceneRoots:
   - {fileID: 1661136268}
   - {fileID: 1865079086}
   - {fileID: 854026921}
+  - {fileID: 1185904450}
