@@ -6,7 +6,7 @@ public class openDoor : MonoBehaviour
 {
 
     Animator animator;
-
+    [SerializeField] string animationName;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class openDoor : MonoBehaviour
     public void OpenDoorAnimation()
     {
         animator.enabled = true;
-        animator.Play("openDoor");
+        animator.Play(animationName);
     }
 }
 
