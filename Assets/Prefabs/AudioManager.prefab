@@ -135,6 +135,13 @@ MonoBehaviour:
       Data3: -1214341487
       Data4: 479172051
     Path: event:/Music/Toms
+  <guitarSolo>k__BackingField:
+    Guid:
+      Data1: 1080347574
+      Data2: 1107190015
+      Data3: 2004380850
+      Data4: 132928387
+    Path: event:/Music/GuitarSolo
   <bass>k__BackingField:
     Guid:
       Data1: -1806468325
@@ -156,3 +163,10 @@ MonoBehaviour:
       Data3: 526346645
       Data4: -1880859391
     Path: event:/SFX/KickDoor
+  <playerHeartBeat>k__BackingField:
+    Guid:
+      Data1: -566410636
+      Data2: 1211171092
+      Data3: 370149565
+      Data4: -428323713
+    Path: event:/SFX/heartbeat

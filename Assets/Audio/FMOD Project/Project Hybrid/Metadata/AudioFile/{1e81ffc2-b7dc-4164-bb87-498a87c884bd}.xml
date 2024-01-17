@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{ca5844b5-6739-4389-83a2-67318a72aea9}">
+	<object class="AudioFile" id="{1e81ffc2-b7dc-4164-bb87-498a87c884bd}">
 		<property name="assetPath">
-			<value>GuitarSolo.wav</value>
+			<value>monsterScream.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>16</value>
+			<value>3.2117006802721089</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{f381fc71-93fc-4a82-9b4b-c3f40cb5dd32}</destination>
