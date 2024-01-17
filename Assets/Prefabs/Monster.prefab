@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5079145058680714515}
   - component: {fileID: 4078556551626130865}
   - component: {fileID: 4298564501897202537}
+  - component: {fileID: 6138771184219006298}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -77,12 +78,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"Player":{"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SeesPlayer":{"_name":"SeesPlayer","_id":"ad3dae0c-b782-4eb4-a45c-c6eb69ad83db","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
   _serializedVariables:
   - _json: '{"_name":"Player","_id":"2f393075-696f-4a5d-8c9b-d01e4728fa20","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
+  - _json: '{"_name":"SeesPlayer","_id":"ad3dae0c-b782-4eb4-a45c-c6eb69ad83db","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+--- !u!114 &6138771184219006298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717815781997028975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff2bf4f164a24ca34a15ce8017545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCell: {fileID: 0}
 --- !u!1001 &1805576563598900834
 PrefabInstance:
   m_ObjectHideFlags: 0
