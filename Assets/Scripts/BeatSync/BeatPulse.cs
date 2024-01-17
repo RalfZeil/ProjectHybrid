@@ -15,6 +15,8 @@ public class BeatPulse : MonoBehaviour
 
     private void Update()
     {
+        if(gameObject.activeSelf == false) return;
+        
         if (transform.localScale.magnitude > originalSize.magnitude)
         {
             Shrink();
