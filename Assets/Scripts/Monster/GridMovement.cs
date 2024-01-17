@@ -97,6 +97,11 @@ public class GridMovement : MonoBehaviour
         targetRot = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
     }
 
+    public void OverrideCurrentPositionWithCell(Cell cell)
+    {
+        currentCell = cell;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //Check if it collides with player
