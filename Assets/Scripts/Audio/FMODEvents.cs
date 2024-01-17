@@ -15,6 +15,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference snare { get; private set; }
     [field: SerializeField] public EventReference hihat { get; private set; }
     [field: SerializeField] public EventReference guitar { get; private set; }
+    [field: SerializeField] public EventReference guitarSolo { get; private set; }
     [field: SerializeField] public EventReference bass { get; private set; }
 
     [field: Header("Player SFX")]

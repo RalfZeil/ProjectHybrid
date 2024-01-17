@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5617241101991297905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8024216530267900503}
+  - component: {fileID: 7020457493261945459}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8024216530267900503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617241101991297905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -112.15718, y: -1.7206752, z: 255.2141}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3155140257909542977}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7020457493261945459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617241101991297905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af84a1e1a5657564884bc56578614cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1
+--- !u!1 &6089385861773778392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3155140257909542977}
+  - component: {fileID: 5413717059707721562}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3155140257909542977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089385861773778392}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8024216530267900503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5413717059707721562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089385861773778392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d654421a2e9f74c4baeafeeeb438a577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <kidsPlaying>k__BackingField:
+    Guid:
+      Data1: 2029733434
+      Data2: 1312629934
+      Data3: 1915618727
+      Data4: -353790464
+    Path: event:/Ambience/KidsPlaying
+  <music>k__BackingField:
+    Guid:
+      Data1: 1247815133
+      Data2: 1180956726
+      Data3: -25774927
+      Data4: 1395554982
+    Path: event:/SFX/PlayerFootsteps
+  <kick>k__BackingField:
+    Guid:
+      Data1: 1430091257
+      Data2: 1185210416
+      Data3: -502076024
+      Data4: 831591717
+    Path: event:/Music/Kick
+  <snare>k__BackingField:
+    Guid:
+      Data1: 422460139
+      Data2: 1168918673
+      Data3: 583983031
+      Data4: 1933349737
+    Path: event:/Music/Snare
+  <hihat>k__BackingField:
+    Guid:
+      Data1: -1654771186
+      Data2: 1327155268
+      Data3: 1852743832
+      Data4: 377278088
+    Path: event:/Music/HiHat
+  <guitar>k__BackingField:
+    Guid:
+      Data1: -1806468325
+      Data2: 1216774218
+      Data3: -1214341487
+      Data4: 479172051
+    Path: event:/Music/Toms
+  <bass>k__BackingField:
+    Guid:
+      Data1: -1806468325
+      Data2: 1216774218
+      Data3: -1214341487
+      Data4: 479172051
+    Path: event:/Music/Toms
+  <playerFootsteps>k__BackingField:
+    Guid:
+      Data1: 1247815133
+      Data2: 1180956726
+      Data3: -25774927
+      Data4: 1395554982
+    Path: event:/SFX/PlayerFootsteps
+  <kickDoor>k__BackingField:
+    Guid:
+      Data1: -2063210163
+      Data2: 1184759839
+      Data3: 526346645
+      Data4: -1880859391
+    Path: event:/SFX/KickDoor
