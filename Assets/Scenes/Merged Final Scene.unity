@@ -844,6 +844,10 @@ PrefabInstance:
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 927008478}
+    - target: {fileID: 2830392174257971813, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
+      propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadWinScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 3935015780665026288, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: m_Name
       value: Grid
@@ -892,10 +896,18 @@ PrefabInstance:
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 927008478}
+    - target: {fileID: 5760683120857191516, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
+      propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadWinScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 6522477133901309396, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 927008478}
+    - target: {fileID: 6522477133901309396, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
+      propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadWinScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 8209164833475701809, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -964,6 +976,10 @@ PrefabInstance:
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 927008478}
+    - target: {fileID: 9115305403431352356, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
+      propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadWinScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
