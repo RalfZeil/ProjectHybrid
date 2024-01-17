@@ -1,9 +1,12 @@
 using NodeCanvas.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridMovement : MonoBehaviour
 {
+    public UnityEvent OnCollideWithPlayer;
+
     //Behaviour
     private Blackboard bb;
     private bool foundPlayer;
@@ -91,5 +94,13 @@ public class GridMovement : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.LookRotation(direction);
         targetRot = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<PlayerMovement>() != null) 
+        {
+            OnCollideWithPlayer.Invoke();
+        }
     }
 }
