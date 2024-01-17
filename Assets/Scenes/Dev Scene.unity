@@ -313,40 +313,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1399672617}
     - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1592063007}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: OnCollideWithPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5717815781997028975, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 470145851}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
 --- !u!1 &12872270
 GameObject:
@@ -9358,34 +9331,6 @@ MonoBehaviour:
   OnPlayerInteraction:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &470145846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5717815781997028975, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-  m_PrefabInstance: {fileID: 7466906}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &470145851
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470145846}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.664461
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.83223045, z: 0}
 --- !u!1 &473372907
 GameObject:
   m_ObjectHideFlags: 0
