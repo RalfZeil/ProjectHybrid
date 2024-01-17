@@ -99,9 +99,10 @@ public class GridMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        //Check if it collides with player
         if(other.GetComponent<PlayerMovement>() != null) 
         {
+            Debug.Log("Collided with Player");
             OnCollideWithPlayer.Invoke();
         }
     }
