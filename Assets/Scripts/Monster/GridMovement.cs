@@ -46,7 +46,7 @@ public class GridMovement : MonoBehaviour
         {
             if (!foundPlayer)
             {
-                FindNewPath(PlayerMovement.Instance.currentCell);
+                
             }
             foundPlayer = true;
         }
@@ -57,7 +57,8 @@ public class GridMovement : MonoBehaviour
 
         if(timer < 0)
         {
-            if((path.Count > 0))
+            FindNewPath(PlayerMovement.Instance.currentCell);
+            if ((path.Count > 0))
             {
                 SetNewDestination();
             }
@@ -98,6 +99,7 @@ public class GridMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if(other.GetComponent<PlayerMovement>() != null) 
         {
             OnCollideWithPlayer.Invoke();
