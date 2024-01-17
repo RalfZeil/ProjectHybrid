@@ -457,6 +457,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+--- !u!114 &395641479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6138771184219006298, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
+  m_PrefabInstance: {fileID: 395641478}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fff2bf4f164a24ca34a15ce8017545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &806729664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,7 +914,7 @@ PrefabInstance:
     - target: {fileID: 77066122788588360, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 920322393}
+      objectReference: {fileID: 2002953537197117879}
     - target: {fileID: 77066122788588360, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Cell, Assembly-CSharp
@@ -1055,7 +1066,7 @@ PrefabInstance:
     - target: {fileID: 8209164833475701809, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 920322393}
+      objectReference: {fileID: 2002953537197117879}
     - target: {fileID: 8209164833475701809, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Cell, Assembly-CSharp
@@ -1087,7 +1098,7 @@ PrefabInstance:
     - target: {fileID: 8948480345004908230, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 920322393}
+      objectReference: {fileID: 2002953537197117879}
     - target: {fileID: 8948480345004908230, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
       propertyPath: OnEnterCell.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Cell, Assembly-CSharp
@@ -1104,6 +1115,17 @@ PrefabInstance:
 --- !u!114 &2002953537197117878 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6270183853253126807, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
+  m_PrefabInstance: {fileID: 2002953537197117877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e085d1236f8232488438a39acedecfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002953537197117879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1585317166382620670, guid: 1ec197e50f2e2d84792a1f617a1925ee, type: 3}
   m_PrefabInstance: {fileID: 2002953537197117877}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
