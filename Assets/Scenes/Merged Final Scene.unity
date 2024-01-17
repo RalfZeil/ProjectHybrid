@@ -4841,6 +4841,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3555882917530472047, guid: a1149306089659b418b9da046fc5f536, type: 3}
       insertIndex: -1
       addedObject: {fileID: 317859533}
+    - targetCorrespondingSourceObject: {fileID: 3555882917530472047, guid: a1149306089659b418b9da046fc5f536, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 317859538}
     - targetCorrespondingSourceObject: {fileID: 7721566840261014688, guid: a1149306089659b418b9da046fc5f536, type: 3}
       insertIndex: -1
       addedObject: {fileID: 317859531}
@@ -4896,6 +4899,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044dae03d6913c44ca87165ffd824c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &317859538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317859528}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &322901914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6004,18 +6034,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 317859528}
     - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.819603
       objectReference: {fileID: 0}
@@ -6054,10 +6072,6 @@ PrefabInstance:
     - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079145058680714515, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5717815781997028975, guid: f77764b093ab3c040a5079bf02dba8d7, type: 3}
       propertyPath: m_Name
