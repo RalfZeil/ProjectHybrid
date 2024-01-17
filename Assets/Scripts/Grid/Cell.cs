@@ -20,9 +20,18 @@ public class Cell : MonoBehaviour
     public UnityEvent OnEnterCell;
     public UnityEvent OnPlayerInteraction;
 
-    public void RemoveWall(Wall wallToRemove)
+    public void RemoveWall(int wallToRemoveDirectionIndex)
     {
+        Wall wallToRemove;
+
+        if (wallToRemoveDirectionIndex == 1) wallToRemove = Wall.LEFT;
+        else if (wallToRemoveDirectionIndex == 2) wallToRemove = Wall.UP;
+        else if (wallToRemoveDirectionIndex == 3) wallToRemove = Wall.RIGHT;
+        else if (wallToRemoveDirectionIndex == 4) wallToRemove = Wall.DOWN;
+        else wallToRemove = Wall.LEFT;
+
         walls = (walls & ~wallToRemove);
+        Debug.Log(walls);
     }
 
     /// <summary>
