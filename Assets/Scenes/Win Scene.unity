@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: MAIN MENU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
   m_sharedMaterial: {fileID: -2884581046842466667, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
@@ -386,8 +386,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.38823533, g: 0.427451, b: 0.8235295, a: 1}
+    m_PressedColor: {r: 0.08388218, g: 0.14009362, b: 0.6132076, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -404,7 +404,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 790875104}
+  m_TargetGraphic: {fileID: 641924127}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -597,8 +597,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.4431373, g: 0.47450984, b: 0.8470589, a: 1}
+    m_PressedColor: {r: 0.14431292, g: 0.18692671, b: 0.6509434, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -615,7 +615,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 949183282}
+  m_TargetGraphic: {fileID: 1276828216}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You win!
+  m_text: YOU WIN!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
   m_sharedMaterial: {fileID: -2884581046842466667, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
   m_sharedMaterial: {fileID: -2884581046842466667, guid: 4167eac954ecd2549bb8f93d7b6946ed, type: 2}
