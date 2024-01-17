@@ -1,9 +1,12 @@
 using NodeCanvas.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridMovement : MonoBehaviour
 {
+    public UnityEvent OnCollideWithPlayer;
+
     //Behaviour
     private Blackboard bb;
     private bool foundPlayer;
@@ -11,7 +14,7 @@ public class GridMovement : MonoBehaviour
     Astar astar;
 
     private float speed = 5f;
-    private const float moveDelay = 1f;
+    private const float moveDelayInSeconds = 2f;
     private float timer = 1f;
 
     [SerializeField] private Cell startCell;
@@ -63,7 +66,7 @@ public class GridMovement : MonoBehaviour
                 FindNewPath(PlayerMovement.Instance.currentCell);
             }
             
-            timer = moveDelay;
+            timer = moveDelayInSeconds;
         }
         else
         {
@@ -85,6 +88,19 @@ public class GridMovement : MonoBehaviour
     {
         currentCell = GameGrid.Instance.GetCellWithPosition(path.Dequeue());
         targetPos = currentCell.transform.position;
-        targetRot = Quaternion.Euler(currentCell.transform.position - transform.position);
+
+        Vector3 direction = targetPos - transform.position;
+        direction.y = 0; 
+
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        targetRot = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.GetComponent<PlayerMovement>() != null) 
+        {
+            OnCollideWithPlayer.Invoke();
+        }
     }
 }
