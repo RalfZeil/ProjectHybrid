@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{463669af-4071-4c54-97b3-23d66a6fe07c}">
+		<property name="assetPath">
+			<value>Electric Buzz/electric buzz4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.3924583333333329</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f381fc71-93fc-4a82-9b4b-c3f40cb5dd32}</destination>
+		</relationship>
+	</object>
+</objects>

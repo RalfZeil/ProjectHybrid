@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6deb48f5-3ad8-48f8-9dcf-93ef786c83d3}">
+		<property name="assetPath">
+			<value>electric humm.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>34.269916666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f381fc71-93fc-4a82-9b4b-c3f40cb5dd32}</destination>
+		</relationship>
+	</object>
+</objects>

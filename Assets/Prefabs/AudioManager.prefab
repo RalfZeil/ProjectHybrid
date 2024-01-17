@@ -170,3 +170,10 @@ MonoBehaviour:
       Data3: 370149565
       Data4: -428323713
     Path: event:/SFX/heartbeat
+  <monsterScream>k__BackingField:
+    Guid:
+      Data1: -1479000437
+      Data2: 1236079774
+      Data3: -658351452
+      Data4: -1011108083
+    Path: event:/SFX/monsterScream
