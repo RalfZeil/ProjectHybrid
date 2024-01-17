@@ -16,6 +16,7 @@ public class BeatSync : MonoBehaviour
         Snare,
         HiHat,
         Guitar,
+        GuitarSolo,
         Bass
     }
 
@@ -47,6 +48,7 @@ public class BeatSync : MonoBehaviour
             { Instrument.Snare, AudioManager.instance.CreateEventInstance(FMODEvents.instance.snare) },
             { Instrument.HiHat, AudioManager.instance.CreateEventInstance(FMODEvents.instance.hihat) },
             { Instrument.Guitar, AudioManager.instance.CreateEventInstance(FMODEvents.instance.guitar) },
+            //{ Instrument.GuitarSolo, AudioManager.instance.CreateEventInstance(FMODEvents.instance.guitarSolo) },
             //{ Instrument.Bass, AudioManager.instance.CreateEventInstance(FMODEvents.instance.bass) },
             // Initialize other instruments similarly
         };
@@ -56,15 +58,13 @@ public class BeatSync : MonoBehaviour
             inst.set3DAttributes(attributes);
         }
 
-        // Initialize beat patterns for each instrument
         beatPatterns = new Dictionary<Instrument, int[]>
         {
-            { Instrument.Kick, new[] { 1, 1, 1, 1 } }, // Example pattern: Play on beats 1 and 3
-            { Instrument.Snare, new[] { 0, 1, 0, 1 } }, // Example pattern: Play on beats 2 and 4
-            { Instrument.HiHat, new[] { 1, 1, 1, 1 } }, // Example pattern: Play on all beats
-            { Instrument.Guitar, new[] { 1, 0, 0, 1 } },
-            //{ Instrument.Bass, new[] { 1, 1, 1, 1 } },
-            // Define other patterns
+            { Instrument.Kick, new[] { 1, 1, 1, 1, 1, 1, 1, 1 } }, // Example pattern: Play on all 8 beats
+            { Instrument.Snare, new[] { 0, 1, 0, 1, 0, 1, 0, 1 } }, // Example pattern: Play on even beats
+            { Instrument.HiHat, new[] { 1, 1, 1, 1, 1, 1, 1, 1 } }, // Example pattern: Play on all 8 beats
+            { Instrument.Guitar, new[] { 1, 0, 0, 0, 1, 0, 0, 0 } },
+            //{ Instrument.GuitarSolo, new[] { 1, 0, 0, 0, 0, 0, 0, 0 } },
         };
 
         playerInput = new PlayerInputActions();
@@ -86,7 +86,7 @@ public class BeatSync : MonoBehaviour
         float eventPlaybackTime = GetEventPlaybackTime();
         if (timeSinceLastBeat >= timePerBeat)
         {
-            int currentBeat = (lastBeat + 1) % 4; // Assuming a 4/4 time signature
+            int currentBeat = (lastBeat + 1) % 8; // Update to 8 for an 8-beat bar
             PlayInstrumentsOnBeat(currentBeat);
 
             lastBeat = currentBeat;
@@ -110,7 +110,7 @@ public class BeatSync : MonoBehaviour
     {
         if (instrumentEvents.TryGetValue(instrument, out EventInstance eventInstance))
         {
-            eventInstance.stop(STOP_MODE.IMMEDIATE);
+            //eventInstance.stop(STOP_MODE.IMMEDIATE);
             eventInstance.start();
         }
     }
@@ -140,10 +140,12 @@ public class BeatSync : MonoBehaviour
     }
     private void EnableInstruments(int level)
     {
-        beatPatterns[Instrument.Kick] = level >= 0 ? new[] { 1, 1, 1, 1 } : new[] { 0, 0, 0, 0 };
-        beatPatterns[Instrument.Snare] = level >= 1 ? new[] { 0, 1, 0, 1 } : new[] { 0, 0, 0, 0 };
-        beatPatterns[Instrument.HiHat] = level >= 2 ? new[] { 1, 1, 1, 1 } : new[] { 0, 0, 0, 0 };
-        beatPatterns[Instrument.Guitar] = level >= 3 ? new[] { 0, 0, 0, 1 } : new[] { 0, 0, 0, 0 };
+        // Update the beat patterns for 8-beat bars
+        beatPatterns[Instrument.Kick] = level >= 0 ? new[] { 1, 1, 1, 1, 1, 1, 1, 1 } : new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        beatPatterns[Instrument.Snare] = level >= 1 ? new[] { 0, 1, 0, 1, 0, 1, 0, 1 } : new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        beatPatterns[Instrument.HiHat] = level >= 2 ? new[] { 1, 1, 1, 1, 1, 1, 1, 1 } : new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        beatPatterns[Instrument.Guitar] = level >= 3 ? new[] { 1, 0, 0, 0, 0, 0, 0, 0 } : new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        //beatPatterns[Instrument.GuitarSolo] = level >= 3 ? new[] { 1, 0, 0, 0, 0, 0, 0, 0 } : new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
     }
     void ChangePlayingBeats(float change)
     {
@@ -162,6 +164,4 @@ public class BeatSync : MonoBehaviour
 
         EnableInstruments(currentInstrumentLevel); // Update enabled instruments
     }
-
-    // ... remaining methods ...
 }
