@@ -177,3 +177,10 @@ MonoBehaviour:
       Data3: -658351452
       Data4: -1011108083
     Path: event:/SFX/monsterScream
+  <monsterFootsteps>k__BackingField:
+    Guid:
+      Data1: -880528059
+      Data2: 1182624961
+      Data3: 1331218837
+      Data4: 2032164256
+    Path: event:/SFX/MonsterFootsteps

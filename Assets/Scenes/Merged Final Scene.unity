@@ -1642,6 +1642,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5413717059707721562, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
+      propertyPath: <guitar>k__BackingField.Path
+      value: event:/Music/Guitar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413717059707721562, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
+      propertyPath: <guitar>k__BackingField.Guid.Data1
+      value: 724806695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413717059707721562, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
+      propertyPath: <guitar>k__BackingField.Guid.Data2
+      value: 1101042111
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413717059707721562, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
+      propertyPath: <guitar>k__BackingField.Guid.Data3
+      value: 434048134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413717059707721562, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
+      propertyPath: <guitar>k__BackingField.Guid.Data4
+      value: 1416809859
+      objectReference: {fileID: 0}
     - target: {fileID: 5617241101991297905, guid: 0365c3b653088ef46af3067ba8b0b05f, type: 3}
       propertyPath: m_Name
       value: AudioManager
